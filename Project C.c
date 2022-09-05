@@ -9,7 +9,7 @@ void tela_equipe(void);
 void tela_conta(void);
 void tela_deposito(void);
 void tela_saque(void);
-void tela_trancasoes(void);
+void tela_transacoes(void);
 void tela_cambio(void);
 void tela_dolar(void);
 void tela_euro(void);
@@ -21,7 +21,7 @@ int main(void) {
     tela_principal();
     tela_deposito();
     tela_saque();
-    tela_trancasoes();
+    tela_transacoes();
     tela_cambio();
     tela_sobre();
     tela_equipe();
