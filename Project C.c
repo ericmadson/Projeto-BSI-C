@@ -11,6 +11,8 @@ void tela_deposito(void);
 void tela_saque(void);
 void tela_trancasoes(void);
 void tela_cambio(void);
+void tela_dolar(void);
+void tela_euro(void);
 
 /////
 // Programa principal
@@ -23,6 +25,8 @@ int main(void) {
     tela_cambio();
     tela_sobre();
     tela_equipe();
+    tela_dolar();
+    tela_euro();
 
 
     return 0;
