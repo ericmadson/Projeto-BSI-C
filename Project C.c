@@ -53,10 +53,9 @@ void tela_conta(void) {
     printf("|              1. Criar conta                                                 |\n");
     printf("|              2. Entrar na conta                                             |\n");
     printf("|              3. Atualizar dados                                             |\n");
-    printf("|              4. Realizar transações                                         |\n");
-    printf("|              5. Deletar conta                                               |\n");
-    printf("|              6. Sobre                                                       |\n");
-    printf("|              7. Equipe                                                      |\n");
+    printf("|              4. Deletar conta                                               |\n");
+    printf("|              5. Sobre                                                       |\n");
+    printf("|              6. Equipe                                                      |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
@@ -178,8 +177,6 @@ void tela_deposito (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar()
 }
 
 void tela_saque (void) {                                                             
@@ -209,8 +206,6 @@ void tela_saque (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar()
 }
 
 void tela_transacoes (void) {                                                             
@@ -241,8 +236,6 @@ void tela_transacoes (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar()
 }
 
 void tela_cambio (void) {                                                             
@@ -274,8 +267,6 @@ void tela_cambio (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar()
 
 
     void tela_dolar(void) {
