@@ -6,6 +6,11 @@
 void tela_principal(void);
 void tela_sobre(void);
 void tela_equipe(void);
+void tela_conta(void)
+void tela_deposito(void)
+void tela_saque(void)
+void tela_trancasoes(void)
+void tela_cambio(void)
 
 /////
 // Programa principal
@@ -39,7 +44,7 @@ void tela_principal(void) {
     printf("\n");
     printf(".=============================================================================.\n");
     printf("|                                                                             |\n");
-    printf("|             Unive  rsidade Federal do Rio Grande do Norte                   |\n");
+    printf("|             Universidade Federal do Rio Grande do Norte                     |\n");
     printf("|                   Centro de Ensino Superior do Seridó                       |\n");
     printf("|                 Departamento de Computação e Tecnologia                     |\n");
     printf("|                    Disciplina DCT1106 -- Programação                        |\n");
@@ -119,37 +124,140 @@ void tela_equipe(void) {
     printf("|              Git: https://github.com/ericmadson                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
-    printf("\n");
-}
+    printf("\n");                                                                               
+}                                                                                                   
 
-void tela_deposito (void) {
-    system("clear||cls");
-    printf("\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///            ===================================================          ///\n");
-    printf("///            = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+void tela_deposito (void) {                                                             
+    system("clear||cls");                                                                       
+    printf("\n");                                                                                       
+    printf(".=============================================================================.\n");
+    printf("|                                                                             |\n");
+    printf("|            ===================================================              |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
     printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
-    printf("///            = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
-    printf("///            ===================================================          ///\n");
-    printf("///               Developed by @flgorgonio -- since Mar, 2020               ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
-    printf("///                                                                         ///\n");
-    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
-    printf("///            = = = = = = = = =  Menu Aluno = = = = = = = = =              ///\n");
-    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            1. Depositar                                                 ///\n");
-    printf("///            2. Ver saldo da conta                                        ///\n");
-    printf("///            3. Extrato                                                   ///\n");
-    printf("///            0. Voltar ao menu anterior                                   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Escolha a opção desejada:                                    ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|            ===================================================              |\n");
+    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
+    printf("|                                                                             |\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = =  Menu Depósito  = = = = = = = =                  |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|                                                                             |\n");
+    printf("|            1. Ver saldo da conta                                            |\n");
+    printf("|            2. Depositar                                                     |\n");
+    //printf("|          3. Extrato   põe aqui ou como opção depois do deposito?                                                    |\n");
+    printf("|            0. Voltar ao menu anterior                                       |\n");
+    printf("|                                                                             |\n");
+    printf("|            Escolha a opção desejada:                                        |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar()
+}
+
+void tela_saque (void) {                                                             
+    system("clear||cls");                                                                       
+    printf("\n");                                                                                       
+    printf(".=============================================================================.\n");
+    printf("|                                                                             |\n");
+    printf("|            ===================================================              |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|            ===================================================              |\n");
+    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
+    printf("|                                                                             |\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = =   Menu Saque    = = = = = = = =                  |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|                                                                             |\n");
+    printf("|            1. Ver saldo da conta                                            |\n");
+    printf("|            2. Sacar                                                         |\n");
+    //printf("|            3. Extrato ?                                                      |\n");
+    printf("|            0. Voltar ao menu anterior                                       |\n");
+    printf("|                                                                             |\n");
+    printf("|            Escolha a opção desejada:                                        |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar()
+}
+
+void tela_trancasoes (void) {                                                             
+    system("clear||cls");                                                                       
+    printf("\n");                                                                                       
+    printf(".=============================================================================.\n");
+    printf("|                                                                             |\n");
+    printf("|            ===================================================              |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|            ===================================================              |\n");
+    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
+    printf("|                                                                             |\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = Menu Transações = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|                                                                             |\n");
+    printf("|            1. Ver saldo da conta                                            |\n");
+    printf("|            2. realizar transação                                            |\n");
+    printf("|            3. Histórico de transações                                       |\n");
+    //printf("|          4. Extrato  ?                                                    |\n");
+    printf("|            0. Voltar ao menu anterior                                       |\n");
+    printf("|                                                                             |\n");
+    printf("|            Escolha a opção desejada:                                        |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar()
+}
+
+void tela_trancasoes (void) {                                                             
+    system("clear||cls");                                                                       
+    printf("\n");                                                                                       
+    printf(".=============================================================================.\n");
+    printf("|                                                                             |\n");
+    printf("|            ===================================================              |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
+    printf("|            ===================================================              |\n");
+    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
+    printf("|                                                                             |\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|            = = = = = = =   Menu Câmbio   = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|                                                                             |\n");
+    printf("|            1. Ver saldo da conta                                            |\n");
+    printf("|            2. realizar câmbio                                               |\n");
+    printf("|            3. Visualizar cotação do dolár                                   |\n");
+    printf("|            4. Visualizar cotação do euro                                    |\n");
+    printf("|            4. Visualizar cotação do peso                                    |\n");
+    printf("|            0. Voltar ao menu anterior                                       |\n");
+    printf("|                                                                             |\n");
+    printf("|            Escolha a opção desejada:                                        |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar()
+
+
+    //menu de pesos com as cotações atuais do peso Argentino, Boliviano, Uruguaio, colômbiano e Venezuelano 
+
 }
