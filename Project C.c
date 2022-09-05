@@ -10,17 +10,32 @@ void tela_equipe(void);
 /////
 // Programa principal
 int main(void) {
+    tela_conta();
     tela_principal();
+    tela_deposito();
+    tela_saque();
+    tela_trancasoes();
+    tela_cambio();
     tela_sobre();
     tela_equipe();
+
+
     return 0;
 }
+
 
 
 /////
 // Funções
 
+
+                //tela de conta //////
+
+
+
+
 void tela_principal(void) {
+    system("clear||cls");
     printf("\n");
     printf(".=============================================================================.\n");
     printf("|                                                                             |\n");
@@ -36,9 +51,9 @@ void tela_principal(void) {
     printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
     printf("|                                                                             |\n");
     printf("|              1. Conta                                                       |\n");
-    printf("|              2. Realizar Depósito                                           |\n");
+    printf("|              2. Realizar depósito                                           |\n");
     printf("|              3. Realizer saque                                              |\n");
-    printf("|              4. Realizar Transações                                         |\n");
+    printf("|              4. Realizar transações                                         |\n");
     printf("|              5. Câmbio para moeda nacional                                  |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
@@ -48,6 +63,7 @@ void tela_principal(void) {
 
 
 void tela_sobre(void) {
+    system("clear||cls");
     printf("\n");
     printf(".=============================================================================.\n");
     printf("|                                                                             |\n");
@@ -75,6 +91,7 @@ void tela_sobre(void) {
 }
 
 void tela_equipe(void) {
+    system("clear||cls");   
     printf("\n");
     printf(".=============================================================================.\n");
     printf("|                                                                             |\n");
@@ -103,4 +120,36 @@ void tela_equipe(void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
+}
+
+void tela_deposito (void) {
+    system("clear||cls");
+    printf("\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///            ===================================================          ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+    printf("///            ===================================================          ///\n");
+    printf("///               Developed by @flgorgonio -- since Mar, 2020               ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                                         ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
+    printf("///            = = = = = = = = =  Menu Aluno = = = = = = = = =              ///\n");
+    printf("///            = = = = = = = = = = = = = = = = = = = = = = = =              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            1. Depositar                                                 ///\n");
+    printf("///            2. Ver saldo da conta                                        ///\n");
+    printf("///            3. Extrato                                                   ///\n");
+    printf("///            0. Voltar ao menu anterior                                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Escolha a opção desejada:                                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                                                                         ///\n");
+    printf("///////////////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar()
 }
