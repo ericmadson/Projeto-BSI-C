@@ -68,7 +68,6 @@ void tela_conta(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-    getchar();
 }
 
 
@@ -100,7 +99,6 @@ void tela_principal(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-    getchar();
 }
 
 
@@ -130,7 +128,6 @@ void tela_sobre(void) {
     printf("|                                                                             |\n");    
     printf(".=============================================================================.\n");
     printf("\n");
-    getchar();
 }
 
 void tela_equipe(void) {
@@ -162,8 +159,7 @@ void tela_equipe(void) {
     printf("|              Git: https://github.com/ericmadson                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
-    printf("\n"); 
-    getchar();                                                                              
+    printf("\n");                                                                           
 }                                                                                                   
 
 void tela_deposito (void) { 
@@ -195,10 +191,10 @@ void tela_deposito (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    getchar();
 }
 
-void tela_saque (void) {                                                             
+void tela_saque (void) { 
+    char op;                                                              
     system("clear||cls");                                                                       
     printf("\n");                                                                                       
     printf(".=============================================================================.\n");
@@ -221,14 +217,16 @@ void tela_saque (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
+    scanf("%c, &op");
+    getchar();
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    getchar();
 }
 
-void tela_transacoes (void) {                                                             
+void tela_transacoes (void) {  
+    char op;                                                            
     system("clear||cls");                                                                       
     printf("\n");                                                                                       
     printf(".=============================================================================.\n");
@@ -252,6 +250,8 @@ void tela_transacoes (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
+    scanf("%c, &op");
+    getchar();
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
@@ -259,7 +259,8 @@ void tela_transacoes (void) {
     getchar();
 }
 
-void tela_cambio (void) {                                                             
+void tela_cambio (void) { 
+    char op;                                                             
     system("clear||cls");                                                                       
     printf("\n");                                                                                       
     printf(".=============================================================================.\n");
@@ -284,20 +285,15 @@ void tela_cambio (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
+    scanf("%c, &op");
+    getchar();
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-<<<<<<< HEAD
-    getchar();
 }
 
 void tela_dolar(void) {
-=======
-    
-
-    void tela_dolar(void) {
->>>>>>> c2c7ed7835f832318047baf0c301c35a0ad86d3f
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
@@ -307,8 +303,7 @@ void tela_dolar(void) {
     printf("|                           1 Dólar : 5,16 Reais                              |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
-    printf("\n");   
-    getchar();                                                                            
+    printf("\n");                                                                             
 }
 
 
@@ -322,8 +317,7 @@ void tela_euro(void) {
     printf("|                            1 Euro : 5,12 Reais                              |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
-    printf("\n");   
-    getchar();                                                                            
+    printf("\n");                                                                              
 }
 
 
