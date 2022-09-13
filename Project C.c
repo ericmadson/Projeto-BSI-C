@@ -39,6 +39,7 @@ int main(void) {
 
 
 void tela_conta(void) {
+    char op;
     system("clear||cls");
     printf("\n");
     printf(".=============================================================================.\n");
@@ -62,12 +63,17 @@ void tela_conta(void) {
     printf("|              6. Equipe                                                      |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
+    printf("               Escolha uma opção acima:");
+    scanf("%c, &op");
+    getchar();
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
 }
 
 
 void tela_principal(void) {
+    char op;
     system("clear||cls");
     printf("\n");
     printf(".=============================================================================.\n");
@@ -89,8 +95,12 @@ void tela_principal(void) {
     printf("|              4. Câmbio para moeda nacional                                  |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
+    printf("               Escolha uma opção acima: ");
+    scanf("%c, &op");
+    getchar();
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
 }
 
 
@@ -120,6 +130,7 @@ void tela_sobre(void) {
     printf("|                                                                             |\n");    
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
 }
 
 void tela_equipe(void) {
@@ -151,10 +162,12 @@ void tela_equipe(void) {
     printf("|              Git: https://github.com/ericmadson                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
-    printf("\n");                                                                               
+    printf("\n"); 
+    getchar();                                                                              
 }                                                                                                   
 
-void tela_deposito (void) {                                                             
+void tela_deposito (void) { 
+    char op;                                                            
     system("clear||cls");                                                                       
     printf("\n");                                                                                       
     printf(".=============================================================================.\n");
@@ -176,11 +189,13 @@ void tela_deposito (void) {
     printf("|            2. Depositar                                                     |\n");
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
-    printf("|            Escolha a opção desejada:                                        |\n");
-    printf("|                                                                             |\n");
+    printf("|            Escolha a opção desejada:  ");
+    scanf("%c, &op");
+    getchar();
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
 }
 
 void tela_saque (void) {                                                             
@@ -210,6 +225,7 @@ void tela_saque (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
 }
 
 void tela_transacoes (void) {                                                             
@@ -240,6 +256,7 @@ void tela_transacoes (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
 }
 
 void tela_cambio (void) {                                                             
@@ -271,9 +288,10 @@ void tela_cambio (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
+    getchar();
+}
 
-
-    void tela_dolar(void) {
+void tela_dolar(void) {
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
@@ -283,11 +301,12 @@ void tela_cambio (void) {
     printf("|                           1 Dólar : 5,16 Reais                              |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
-    printf("\n");                                                                               
+    printf("\n");   
+    getchar();                                                                            
 }
 
 
-    void tela_euro(void) {
+void tela_euro(void) {
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
@@ -297,8 +316,8 @@ void tela_cambio (void) {
     printf("|                            1 Euro : 5,12 Reais                              |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
-    printf("\n");                                                                               
+    printf("\n");   
+    getchar();                                                                            
 }
 
 
-}
