@@ -3,14 +3,14 @@
 
 /////
 // Assinatura das funções
-void tela_principal(void);
-void tela_sobre(void);
-void tela_equipe(void);
 void tela_conta(void);
+void tela_principal(void);
 void tela_deposito(void);
 void tela_saque(void);
 void tela_transacoes(void);
 void tela_cambio(void);
+void tela_sobre(void);
+void tela_equipe(void);
 void tela_dolar(void);
 void tela_euro(void);
 
@@ -288,10 +288,16 @@ void tela_cambio (void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
+<<<<<<< HEAD
     getchar();
 }
 
 void tela_dolar(void) {
+=======
+    
+
+    void tela_dolar(void) {
+>>>>>>> c2c7ed7835f832318047baf0c301c35a0ad86d3f
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
