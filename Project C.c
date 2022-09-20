@@ -13,6 +13,10 @@ void tela_sobre(void);
 void tela_equipe(void);
 void tela_dolar(void);
 void tela_euro(void);
+void tela_contaNome(void);
+void tela_contaCPF(void);
+void tela_contaRG(void);
+void tela_contaConcluida(void);
 
 /////
 // Programa principal
@@ -27,8 +31,10 @@ int main(void) {
     tela_equipe();
     tela_dolar();
     tela_euro();
-
-
+    tela_contaNome();
+    tela_contaCPF();
+    tela_contaRG();
+    tela_contaConcluida();
     return 0;
 }
 
@@ -68,6 +74,69 @@ void tela_conta(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
+}
+
+// modulo 1
+void tela_contaNome(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite seu nome completo:\n                        |\n");
+    scanf("%c, &op");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+
+// modulo 1 tela 2
+void tela_contaCPF(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite seu CPF:\n                                  |\n");
+    scanf("%c, &op");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+
+// modulo 1 tela 3
+void tela_contaRG(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite seu RG:\n                                   |\n");
+    scanf("%c, &op");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+
+// modulo 1 tela 4 (final)
+void tela_contaConcluida(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = Conta criada com sucesso ! = = = = =                |\n");
+    printf("|                                                                             |\n");
+    printf("|                  [Obrigado por confiar em nossos serviços]                  |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
+    printf("\n"); 
 }
 
 
@@ -321,3 +390,4 @@ void tela_euro(void) {
 }
 
 
+                                                                                                                                                   
