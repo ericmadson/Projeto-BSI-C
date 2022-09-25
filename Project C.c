@@ -4,6 +4,7 @@
 /////
 // Assinatura das funções
 void tela_conta(void);
+void criar_conta(void);
 void tela_principal(void);
 void tela_deposito(void);
 void tela_saque(void);
@@ -21,20 +22,26 @@ void tela_contaConcluida(void);
 /////
 // Programa principal
 int main(void) {
-    tela_conta();
-    tela_principal();
-    tela_deposito();
-    tela_saque();
-    tela_transacoes();
-    tela_cambio();
-    tela_sobre();
-    tela_equipe();
-    tela_dolar();
-    tela_euro();
-    tela_contaNome();
-    tela_contaCPF();
-    tela_contaRG();
-    tela_contaConcluida();
+    char opcao;
+
+    do {
+        opcao = tela_conta();
+        switch(opcao) {
+            case '1':   criar_conta();
+                        break;
+            case '2':   // modulo entrar
+                        break;
+            case '3':   // modulo mudar senha
+                        break;
+            case '4':   // modulo deletar
+                        break;
+            case '5':   tela_sobre();
+                        break;
+            case '6':   tela_equipe();
+                        break;
+        } 	
+    } while (opcao != '0');
+
     return 0;
 }
 
@@ -74,6 +81,13 @@ void tela_conta(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
+}
+
+void criar_conta(void) {
+    tela_contaNome();
+    tela_contaCPF();
+    tela_contaRG();
+    tela_contaConcluida();
 }
 
 // modulo 1
