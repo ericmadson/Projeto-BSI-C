@@ -3,21 +3,34 @@
 
 /////
 // Assinatura das funções
-void tela_conta(void);
+char tela_conta(void);
 void criar_conta(void);
 void tela_principal(void);
 void tela_deposito(void);
 void tela_saque(void);
 void tela_transacoes(void);
 void tela_cambio(void);
-void tela_sobre(void);
-void tela_equipe(void);
 void tela_dolar(void);
 void tela_euro(void);
+//modulo 1
 void tela_contaNome(void);
 void tela_contaCPF(void);
 void tela_contaRG(void);
 void tela_contaConcluida(void);
+//modulo 2
+void entrar_CPF(void);
+void entrar_senha(void);
+void entrar_load(void);
+//modulo 3
+void mudar_CPF(void);
+void mudar_senha(void);
+//modulo 4
+void deletar_CPF(void);
+void deletar_senha(void);
+//modulo 5
+void tela_sobre(void);
+//modulo 6
+void tela_equipe(void);
 
 /////
 // Programa principal
@@ -45,13 +58,11 @@ int main(void) {
     return 0;
 }
 
-
-
 /////
 // Funções
 
 
-void tela_conta(void) {
+char tela_conta(void) {
     char op;
     system("clear||cls");
     printf("\n");
@@ -70,26 +81,24 @@ void tela_conta(void) {
     printf("|                                                                             |\n");
     printf("|              1. Criar conta                                                 |\n");
     printf("|              2. Entrar na conta                                             |\n");
-    printf("|              3. Atualizar dados                                             |\n");
+    printf("|              3. Mudar senha                                                 |\n");
     printf("|              4. Deletar conta                                               |\n");
     printf("|              5. Sobre                                                       |\n");
     printf("|              6. Equipe                                                      |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
     printf("               Escolha uma opção acima:");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
 }
-
 void criar_conta(void) {
     tela_contaNome();
     tela_contaCPF();
     tela_contaRG();
     tela_contaConcluida();
 }
-
 // modulo 1
 void tela_contaNome(void) {
     char op;
@@ -100,12 +109,11 @@ void tela_contaNome(void) {
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite seu nome completo:\n                        |\n");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 
 }
-
 // modulo 1 tela 2
 void tela_contaCPF(void) {
     char op;
@@ -116,12 +124,11 @@ void tela_contaCPF(void) {
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite seu CPF:\n                                  |\n");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 
 }
-
 // modulo 1 tela 3
 void tela_contaRG(void) {
     char op;
@@ -131,13 +138,12 @@ void tela_contaRG(void) {
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite seu RG:\n                                   |\n");
-    scanf("%c, &op");
+    printf("|                              Digite seu RG:\n                               |\n");
+    scanf("%c", &op);
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 
 }
-
 // modulo 1 tela 4 (final)
 void tela_contaConcluida(void) {
     char op;
@@ -149,11 +155,60 @@ void tela_contaConcluida(void) {
     printf("|                                                                             |\n");
     printf("|                  [Obrigado por confiar em nossos serviços]                  |\n");
     printf("|                                                                             |\n");
+    getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 
 }
-
-
+// modulo 2 tela 1
+void entrar_CPF(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
+    printf("|                                                                             |\n");
+    printf("|                              Digite seu CPF:\n                              |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+// modulo 2 tela 2
+void entrar_senha(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
+    printf("|                                                                             |\n");
+    printf("|                             Digite sua senha:\n                             |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+//modulo 2 tela 3
+void entrar_load(void) {
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                  = = = = = carregando sua conta = = = = =                   |\n");
+    printf("|                                                                             |\n");
+    printf("|                                 °\n                                         |\n");
+    _sleep(1);
+    printf("|                                       °\n                                   |\n");
+    _sleep(2);
+    printf("|                                 °\n                                         |\n");
+    _sleep(3);
+    printf("|                                [pronto]                                     |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+//modulo 2 tela principal
 void tela_principal(void) {
     char op;
     system("clear||cls");
@@ -178,13 +233,72 @@ void tela_principal(void) {
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
     printf("               Escolha uma opção acima: ");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
 }
-
-
+//modulo 3 tela 1
+void mudar_CPF(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
+    printf("|                                                                             |\n");
+    printf("|                   Digite o CPF da conta a ser alterada:\n                   |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+//modulo 3 tela 2
+void mudar_senha(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
+    printf("|                                                                             |\n");
+    printf("|                  Digite a senha da conta a ser alterada:\n                  |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+//modulo 4 tela 1
+void deletar_CPF(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
+    printf("|                                                                             |\n");
+    printf("|                   Digite o CPF da conta a ser deletada:\n                   |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+}
+//modulo 4 tela 2
+void deletar_senha(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
+    printf("|                                                                             |\n");
+    printf("|                  Digite a senha da conta a ser deletada:\n                  |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+}
+// modulo 5 
 void tela_sobre(void) {
     system("clear||cls");
     printf("\n");
@@ -210,9 +324,10 @@ void tela_sobre(void) {
     printf("|     simulando as atividades que possam ocorrer em um banco real.            |\n");
     printf("|                                                                             |\n");    
     printf(".=============================================================================.\n");
+    getchar();
     printf("\n");
 }
-
+//modulo 6
 void tela_equipe(void) {
     system("clear||cls");   
     printf("\n");
@@ -242,6 +357,7 @@ void tela_equipe(void) {
     printf("|              Git: https://github.com/ericmadson                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
+    getchar();
     printf("\n");                                                                           
 }                                                                                                   
 
@@ -269,7 +385,7 @@ void tela_deposito (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:  ");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
@@ -300,7 +416,7 @@ void tela_saque (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
@@ -333,13 +449,12 @@ void tela_transacoes (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("\n");
-    getchar();
 }
 
 void tela_cambio (void) { 
@@ -368,7 +483,7 @@ void tela_cambio (void) {
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
-    scanf("%c, &op");
+    scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
@@ -386,6 +501,7 @@ void tela_dolar(void) {
     printf("|                           1 Dólar : 5,16 Reais                              |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
+    getchar();
     printf("\n");                                                                             
 }
 
@@ -400,6 +516,7 @@ void tela_euro(void) {
     printf("|                            1 Euro : 5,12 Reais                              |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
+    getchar();
     printf("\n");                                                                              
 }
 
