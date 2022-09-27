@@ -9,7 +9,13 @@ void tela_contaRG(void);
 void tela_contaConcluida(void);
 
 void criar_conta(void) {
-    void tela_contaNome(void) {
+    tela_contaNome();
+    tela_contaCPF();
+    tela_contaRG();
+    tela_contaConcluida();
+}
+
+void tela_contaNome(void) {
         char op;
         system("clear||cls");   
         printf("\n");
@@ -68,5 +74,4 @@ void criar_conta(void) {
         printf(".=============================================================================.\n");
         printf("\n"); 
     }
-}
 
