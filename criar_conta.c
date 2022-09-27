@@ -13,6 +13,7 @@ void criar_conta(void) {
     tela_contaCPF();
     tela_contaRG();
     tela_contaConcluida();
+    return 0;
 }
 
 void tela_contaNome(void) {

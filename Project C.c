@@ -112,6 +112,7 @@ char tela_conta(void) {
     scanf("%c", &op);
     getchar();
     printf("\n");
+    return op;
 }
 // modulo 1
 
