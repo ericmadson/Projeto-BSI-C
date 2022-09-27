@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "criar_conta.c"
 
 /////
 // Assinatura das funções
@@ -111,78 +112,14 @@ char tela_conta(void) {
     printf("|              6. Equipe                                                      |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
-    printf("               Escolha uma opção acima:");
+    printf(".=============================================================================.\n");
+    printf("               Escolha uma opção acima: ");
     scanf("%c", &op);
     getchar();
-    printf(".=============================================================================.\n");
     printf("\n");
-}
-void criar_conta(void) {
-    tela_contaNome();
-    tela_contaCPF();
-    tela_contaRG();
-    tela_contaConcluida();
 }
 // modulo 1
-void tela_contaNome(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
-    printf("|                                                                             |\n");
-    printf("|                          Digite seu nome completo:\n                        |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-// modulo 1 tela 2
-void tela_contaCPF(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
-    printf("|                                                                             |\n");
-    printf("|                          Digite seu CPF:\n                                  |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-// modulo 1 tela 3
-void tela_contaRG(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
-    printf("|                                                                             |\n");
-    printf("|                              Digite seu RG:\n                               |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-// modulo 1 tela final (se funcionar)
-void tela_contaConcluida(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|               = = = = = Conta criada com sucesso ! = = = = =                |\n");
-    printf("|                                                                             |\n");
-    printf("|                  [Obrigado por confiar em nossos serviços]\n                |\n");
-    printf("|                                                                             |\n");
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
+
 // modulo 1 tela final (se não funcionar)
 void tela_contaNao(void) {
     char op;
