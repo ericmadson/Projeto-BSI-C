@@ -30,12 +30,7 @@ void tela_dolar(void);
 void tela_euro(void);
 //modulo 1
 char tela_conta(void);
-void criar_conta(void);
-void tela_contaNome(void);
-void tela_contaCPF(void);
-void tela_contaRG(void);
-void tela_contaConcluida(void);
-void tela_contaNao(void);
+// void tela_contaNao(void);
 //modulo 2
 void tela_principal(void);
 void entrar_CPF(void);
@@ -121,7 +116,7 @@ char tela_conta(void) {
 // modulo 1
 
 // modulo 1 tela final (se não funcionar)
-void tela_contaNao(void) {
+/* void tela_contaNao(void) {
     char op;
     system("clear||cls");   
     printf("\n");
@@ -134,7 +129,7 @@ void tela_contaNao(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-}
+} */
 
 // modulo 2 tela 1
 void entrar_CPF(void) {
