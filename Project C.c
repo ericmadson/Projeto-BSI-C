@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "criar_conta.c"
+#include "entrar_conta.c"
+#include "mudar_senha.c"
+#include "deletar_conta.c"
 
 /////
 // Assinatura das funções
@@ -32,21 +35,10 @@ void tela_euro(void);
 char tela_conta(void);
 // void tela_contaNao(void);
 //modulo 2
-void tela_principal(void);
-void entrar_CPF(void);
-void entrar_senha(void);
-void entrar_load(void);
-void entrar_nao(void);
+// void tela_principal(void);
 //modulo 3
-void mudar_CPF(void);
-void mudar_senha(void);
-void mudar_nao(void);
-void mudar_sim(void);
+// void mudar_nao(void);
 //modulo 4
-void deletar_CPF(void);
-void deletar_senha(void);
-void deletar_nao(void);
-void deletar_sim(void);
 //modulo 5
 void tela_sobre(void);
 //modulo 6
@@ -62,11 +54,11 @@ int main(void) {
         switch(opcao) {
             case '1':   criar_conta();
                         break;
-            case '2':   // modulo entrar
+            case '2':   entrar_conta();
                         break;
-            case '3':   // modulo mudar senha
+            case '3':   mudar_senha();
                         break;
-            case '4':   // modulo deletar
+            case '4':   deletar_conta();
                         break;
             case '5':   tela_sobre();
                         break;
@@ -133,57 +125,10 @@ char tela_conta(void) {
 } */
 
 // modulo 2 tela 1
-void entrar_CPF(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
-    printf("|                                                                             |\n");
-    printf("|                              Digite seu CPF:\n                              |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-// modulo 2 tela 2
-void entrar_senha(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
-    printf("|                                                                             |\n");
-    printf("|                             Digite sua senha:\n                             |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-//modulo 2 tela 3
-void entrar_load(void) {
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                  = = = = = carregando sua conta = = = = =                   |\n");
-    printf("|                                                                             |\n");
-    printf("|                                 °\n                                         |\n");
-    _sleep(1);
-    printf("|                                       °\n                                   |\n");
-    _sleep(2);
-    printf("|                                 °\n                                         |\n");
-    _sleep(3);
-    printf("|                                [pronto]                                     |\n");
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
+
 
 //modulo 2 tela final se funcionar 
-void entrar_nao(void) {
+/* void entrar_nao(void) {
     char op;
     system("clear||cls");   
     printf("\n");
@@ -196,10 +141,10 @@ void entrar_nao(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-}
+} */
 
 //modulo 2 tela principal
-void tela_principal(void) {
+/*void tela_principal(void) {
     char op;
     system("clear||cls");
     printf("\n");
@@ -227,7 +172,7 @@ void tela_principal(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-}
+} */
 
 // sub-modulo 1 tela 1
 void tela_deposito (void) { 
@@ -638,55 +583,8 @@ void tela_euro(void) {
     printf("\n");                                                                              
 }                                                                                                     
 
-//modulo 3 tela 1
-void mudar_CPF(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
-    printf("|                                                                             |\n");
-    printf("|                   Digite o CPF da conta a ser alterada:\n                   |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-//modulo 3 tela 2
-void mudar_senha(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
-    printf("|                                                                             |\n");
-    printf("|                  Digite a senha da conta a ser alterada:\n                  |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-}
-
 //modulo 3 tela final se funcionar 
-void mudar_sim(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|           = = = = = sua senha foi alterada com sucesso ! = = = = =          |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [Obrigado por confiar em nossos serviços]\n                 |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-}
-
-//modulo 3 tela final se funcionar 
-void mudar_nao(void) {
+/* void mudar_nao(void) {
     char op;
     system("clear||cls");   
     printf("\n");
@@ -699,57 +597,13 @@ void mudar_nao(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-}
+} */
 
 //modulo 4 tela 1
-void deletar_CPF(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
-    printf("|                                                                             |\n");
-    printf("|                   Digite o CPF da conta a ser deletada:\n                   |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-}
-//modulo 4 tela 2
-void deletar_senha(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
-    printf("|                                                                             |\n");
-    printf("|                  Digite a senha da conta a ser deletada:\n                  |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-}
 
-//modulo 4 tela final se funcionar
-void deletar_sim(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|              = = = = = Conta deletada com sucesso ! = = = = =               |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [Obrigado por confiar em nossos serviços]\n                 |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-}
 
 //modulo 4 tela final se não funcionar
-void deletar_nao(void) {
+/* void deletar_nao(void) {
     char op;
     system("clear||cls");   
     printf("\n");
@@ -762,7 +616,7 @@ void deletar_nao(void) {
     getchar();
     printf(".=============================================================================.\n");
     printf("\n");
-}
+} */
 
 // modulo 5 
 void tela_sobre(void) {
