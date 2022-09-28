@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void mudar_senha(void);
-void mudar_CPF(void);
-void mudar_senha(void);
-void mudar_sim(void);
+#include <unistd.h>
+#include <mudar_senha.h>
 
 void mudar_senha(void) {
     mudar_CPF();
@@ -58,3 +55,18 @@ void mudar_sim(void) {
     printf(".=============================================================================.\n");
     printf("\n");
 }
+//modulo 3 tela final se funcionar 
+void mudar_nao(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|           = = = = = nao foi possivel alterar sua senha ! = = = = =          |\n");
+    printf("|                                                                             |\n");
+    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+} 

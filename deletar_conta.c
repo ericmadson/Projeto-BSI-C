@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void deletar_conta(void);
-void deletar_CPF(void);
-void deletar_senha(void);
-void deletar_sim(void);
+#include <unistd.h>
+#include <deletar_conta.h>
 
 void deletar_conta(void) {
     deletar_CPF();
@@ -58,4 +55,20 @@ void deletar_sim(void) {
     printf(".=============================================================================.\n");
     printf("\n");
 }
+
+//modulo 4 tela final se não funcionar
+void deletar_nao(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|           = = = = = Não foi possivel deletar a conta ! = = = = =            |\n");
+    printf("|                                                                             |\n");
+    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+} 
 

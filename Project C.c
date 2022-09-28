@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "criar_conta.c"
-#include "entrar_conta.c"
-#include "mudar_senha.c"
-#include "deletar_conta.c"
-
+#include "criar_conta.h"
+#include "entrar_conta.h"
+#include "mudar_senha.h"
+#include "deletar_conta.h"
+#include "tela_equipe.h"
+#include "tela_sobre.h"
 /////
 // Assinatura das funções
 //sub-modulo 1
@@ -33,11 +34,9 @@ void tela_dolar(void);
 void tela_euro(void);
 //modulo 1
 char tela_conta(void);
-// void tela_contaNao(void);
 //modulo 2
 // void tela_principal(void);
 //modulo 3
-// void mudar_nao(void);
 //modulo 4
 //modulo 5
 void tela_sobre(void);
@@ -106,42 +105,10 @@ char tela_conta(void) {
     printf("\n");
     return op;
 }
-// modulo 1
-
-// modulo 1 tela final (se não funcionar)
-/* void tela_contaNao(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|               = = = = = falha na criacao da conta ! = = = = =               |\n");
-    printf("|                                                                             |\n");
-    printf("|                [CPF, RG ou nome invalidos, tente novamente]\n               |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-} */
 
 // modulo 2 tela 1
 
 
-//modulo 2 tela final se funcionar 
-/* void entrar_nao(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|            = = = = = nao foi possivel entrar na conta ! = = = = =           |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-} */
 
 //modulo 2 tela principal
 /*void tela_principal(void) {
@@ -582,103 +549,3 @@ void tela_euro(void) {
     getchar();
     printf("\n");                                                                              
 }                                                                                                     
-
-//modulo 3 tela final se funcionar 
-/* void mudar_nao(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|           = = = = = nao foi possivel alterar sua senha ! = = = = =          |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-} */
-
-//modulo 4 tela 1
-
-
-//modulo 4 tela final se não funcionar
-/* void deletar_nao(void) {
-    char op;
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|           = = = = = Não foi possivel deletar a conta ! = = = = =            |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
-    scanf("%c", &op);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-} */
-
-// modulo 5 
-void tela_sobre(void) {
-    system("clear||cls");
-    printf("\n");
-    printf(".=============================================================================.\n");
-    printf("|                                                                             |\n");
-    printf("|             Universidade Federal do Rio Grande do Norte                     |\n");
-    printf("|                 Centro de Ensino Superior do Seridó                         |\n");
-    printf("|               Departamento de Computação e Tecnologia                       |\n");
-    printf("|                  Disciplina DCT1106 -- Programação                          |\n");
-    printf("|               Sistema de Controle de Contas Bancárias                       |\n");
-    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
-    printf("|                                                                             |\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|       = = = = = Sistema de Controle de Contas Bancárias = = = = =           |\n");
-    printf("|                                                                             |\n");
-    printf("|     Algumas pessoas físicas e a maioria das pessoas jurídicas dispõe de     |\n");
-    printf("|     contas em vários bancos. O controle financeiro das várias contas de     |\n");
-    printf("|     uma pessoa ou empresa demanda tempo e esforço, principalmente se for    |\n");
-    printf("|     realizadoo sem a ajuda de um software. O presente projeto tem como      |\n");
-    printf("|     objetivo desenvolver um programa de computador que realize o registro   |\n");
-    printf("|     e o acompanhamento de operações financeiras de várias contas bancárias  |\n");
-    printf("|     simulando as atividades que possam ocorrer em um banco real.            |\n");
-    printf("|                                                                             |\n");    
-    printf(".=============================================================================.\n");
-    getchar();
-    printf("\n");
-}
-//modulo 6
-void tela_equipe(void) {
-    system("clear||cls");   
-    printf("\n");
-    printf(".=============================================================================.\n");
-    printf("|                                                                             |\n");
-    printf("|               Universidade Federal do Rio Grande do Norte                   |\n");
-    printf("|                   Centro de Ensino Superior do Seridó                       |\n");
-    printf("|                 Departamento de Computação e Tecnologia                     |\n");
-    printf("|                    Disciplina DCT1106 -- Programação                        |\n");
-    printf("|                 Sistema de Controle de Contas Bancárias                     |\n");
-    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
-    printf("|                                                                             |\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
-    printf("|                                                                             |\n");
-    printf("|              This project was developed by:                                 |\n");
-    printf("|                                                                             |\n");
-    printf("|              Gabriel D. Oliveira                                            |\n");
-    printf("|              E-mail: Gabreelzinn@gmail.com                                  |\n");
-    printf("|              Redes sociais: @igwbriel                                       |\n");
-    printf("|              Git: https://github.com/Igwbriel                               |\n");
-    printf("|                                                                             |\n"); 
-    printf("|              Eric M.A.M. De Oliveira                                        |\n");
-    printf("|              E-mail: Ericmadson67@hotmail.com                               |\n");
-    printf("|              Redes sociais: @ericmadsonn                                    |\n");
-    printf("|              Git: https://github.com/ericmadson                             |\n");
-    printf("|                                                                             |\n");
-    printf(".=============================================================================.\n");
-    getchar();
-    printf("\n");                                                                           
-}                                                                                                   
-
-                                             

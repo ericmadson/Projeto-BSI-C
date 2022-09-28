@@ -1,18 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-void entrar_conta(void);
-void entrar_CPF(void);
-void entrar_senha(void);
-void entrar_load(void);
-void tela_principal(void);
+#include <unistd.h>
+#include <entrar_conta.h>
 
 void entrar_conta(void) {
     entrar_CPF();
     entrar_senha();
     entrar_load();
     tela_principal();
-    return 0;
+   return 0;
 }
 
 void entrar_CPF(void) {
@@ -63,3 +59,18 @@ void entrar_load(void) {
     printf(".=============================================================================.\n");
     printf("\n"); 
 }
+//modulo 2 tela final se funcionar 
+void entrar_nao(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = nao foi possivel entrar na conta ! = = = = =           |\n");
+    printf("|                                                                             |\n");
+    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+} 

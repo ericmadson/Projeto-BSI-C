@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <criar_conta.h>
 
-void criar_conta(void);
-void tela_contaNome(void);
-void tela_contaCPF(void);
-void tela_contaRG(void);
-void tela_contaConcluida(void);
+
 
 void criar_conta(void) {
-    tela_contaNome();
+   tela_contaNome();
     tela_contaCPF();
     tela_contaRG();
     tela_contaConcluida();
@@ -75,4 +72,18 @@ void tela_contaNome(void) {
         printf(".=============================================================================.\n");
         printf("\n"); 
     }
-
+//modulo 1 tela final (se não funcionar)
+void tela_contaNao(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = falha na criacao da conta ! = = = = =               |\n");
+    printf("|                                                                             |\n");
+    printf("|                [CPF, RG ou nome invalidos, tente novamente]\n               |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+} 
