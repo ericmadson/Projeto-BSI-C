@@ -1,4 +1,6 @@
-#include <tela_sobre.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "tela_sobre.h"
 // modulo 5 
 void tela_sobre(void) {
     system("clear||cls");

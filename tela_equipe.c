@@ -1,4 +1,4 @@
-#include <tela_equipe.h>
+#include "tela_equipe.h"
 
 //modulo 6
 void tela_equipe(void) {
