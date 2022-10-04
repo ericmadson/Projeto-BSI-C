@@ -16,7 +16,7 @@ int menu_saque(void) {
                 break;
 
             case '2':   
-                //entrar_conta();
+                tela_FazerSaque();
                 break;
             
             case '3':   
@@ -61,3 +61,46 @@ char tela_saque (void) {
     printf("\n");
     return op;
 }
+
+void tela_FazerSaque(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|               = = = = = = = =  Menu Saque = = = = = = = = = =               |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|                                                                             |\n");
+    printf("|                      digite o valor que deseja sacar:                       |\n");
+    scanf("%s", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|              = = = = = saque realizado com sucesso ! = = = = =              |\n");
+    printf("|                                                                             |\n");
+    printf("|                  [Obrigado por confiar em nossos serviços]\n                |\n");
+    printf("|                                                                             |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+
+/*
+
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = Falha ao realizar o saque ! = = = = =               |\n");
+    printf("|                                                                             |\n");
+    printf("|              [verifique os dados inseridos e tente novamente]\n             |\n");
+    printf("|                                                                             |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+*/

@@ -18,7 +18,7 @@ int menu_deposito(void) {
                 break;
 
             case '2':   
-                //entrar_conta();
+                tela_FazerDeposito();
                 break;
             
             case '3':   
@@ -62,3 +62,48 @@ char tela_deposito (void) {
     printf("\n");
     return op;
 }
+
+void tela_FazerDeposito(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = =  Menu Depósito  = = = = = = = =                  |\n");
+    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
+    printf("|                                                                             |\n");
+    printf("|                    Digite o valor que deseja depositar:                     |\n");
+    scanf("%s", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|               = = = deposito realizado com sucesso !!!  = = =               |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|                                                                             |\n");
+    printf("|                  [Obrigado por confiar em nossos serviços]                  |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+} 
+/*
+//sub-modulo 1 tela final (se não funcionar)
+void tela_depositoNao(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = Falha ao realizar o deposito ! = = = = =            |\n");
+    printf("|                                                                             |\n");
+    printf("|              [verifique os dados inseridos e tente novamente]\n             |\n");
+    printf("|                                                                             |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}*/
