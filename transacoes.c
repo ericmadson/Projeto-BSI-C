@@ -16,7 +16,7 @@ int menu_transacoes(void) {
                 break;
 
             case '2':   
-                //entrar_conta();
+                tela_FazerTransacoes();
                 break;
             
             case '3':   
@@ -50,7 +50,6 @@ char tela_transacoes (void) {
     printf("|                                                                             |\n");
     printf("|            1. Ver saldo da conta                                            |\n");
     printf("|            2. Realizar transação                                            |\n");
-    printf("|            3. Histórico de transações                                       |\n");
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
     printf("|            Escolha a opção desejada:                                        |\n");
@@ -62,3 +61,66 @@ char tela_transacoes (void) {
     printf("\n");
     return op;
 }
+
+void tela_FazerTransacoes(void) {
+    char op;
+    char tran;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|                = = = = = = =  Menu transacoes = = = = = = =                 |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|                                                                             |\n");
+    printf("|                digite o CPF da conta que deseja transferir:                 |\n");
+    scanf("%c", &op);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|                = = = = = = =  Menu transacoes = = = = = = =                 |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|                                                                             |\n");
+    printf("|                     digite o valor a ser transferido:                      |\n");
+    scanf("%s", &tran);
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|            = = = = = transaçao concluida com sucesso ! = = = = =            |\n");
+    printf("|                                                                             |\n");
+    printf("|                  [Obrigado por confiar em nossos serviços]\n                |\n");
+    printf("|                                                                             |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+}
+
+/*
+
+//sub-modulo 3 tela 6 (final se não funcionar)
+void tela_ValorNao(void) {
+    char op;
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|         = = = = = nao foi possivel realizar a transacao ! = = = = =         |\n");
+    printf("|                                                                             |\n");
+    printf("|              [verifique os dados inseridos e tente novamente]\n             |\n");
+    printf("|                                                                             |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n"); 
+ printf("|            3. Histórico de transações                                       |\n");
+} */
+
+// ////////////////////////////     OBS: Tá Faltando a tela do histórico de transações ///////////////////////
