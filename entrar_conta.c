@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "entrar_conta.h"
+#include "menu_conta.h"
 
 void entrar_conta(void) {
     char cpf[20];
@@ -44,7 +45,8 @@ void entrar_conta(void) {
     printf("|                                [pronto]                                     |\n");
     getchar();
     printf(".=============================================================================.\n");
-    printf("\n"); 
+    printf("\n");
+    menu_conta(); 
 }
 //modulo 2 tela final se funcionar 
 void entrar_nao(void) {
