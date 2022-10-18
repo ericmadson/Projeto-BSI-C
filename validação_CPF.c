@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int cpfvalidation() {
 char cpf[12];
 int icpf[12];
 int i, somador = 0, digito1, result1, result2, digito2,valor;
