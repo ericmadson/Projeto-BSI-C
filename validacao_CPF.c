@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "validacao_CPF.h"
 
 int cpfvalidation() {
 char cpf[12];
