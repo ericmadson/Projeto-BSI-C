@@ -43,12 +43,11 @@ struct cadastro_conta conta;
     printf("|                          Digite sua senha: (apenas números)\n               |\n");
     scanf("%s", &conta.password);
     system("clear||cls");
+    getchar();
     printf("\n Nome: %s", conta.nome);
     printf("\n CPF: %s\n", conta.cpf);
     printf("\n Senha: %s", conta.password);
     getchar();
-
-
 //por os "." e "-" no CPF
 
 return 0;
