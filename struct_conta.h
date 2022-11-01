@@ -1,0 +1,1 @@
+int struct_conta();
