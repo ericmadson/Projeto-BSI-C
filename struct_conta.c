@@ -3,25 +3,30 @@
 #include <unistd.h>
 #include <string.h>
 #include <ctype.h>
-#include "validacao_senha.h"
-#include "criar_conta.h"
 
-int struct_conta() {
-   
+typedef struct cadastro_conta Salva;
+
 struct cadastro_conta {
-    char nome[100];
-    char cpf[35];
-    char password[30];
+    char nome;
+    long int CPF;
+    long int password;
+    char status;
 };
 
-struct cadastro_conta conta;
+void gravaAluno(Salva*);
+void salvaConta(Salva*);
+int struct_conta() {
+   
+struct cadastro_conta;
+    Salva* aln;
+    aln = (Salva*) malloc(sizeof(Salva));
     system("clear||cls");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite seu nome completo:\n                        |\n");
-    fgets(conta.nome, 100,stdin);
+    scanf("%80[^\n]", &aln->nome);
     printf(".=============================================================================.\n");
     printf("\n");
     system("clear||cls");   
@@ -31,7 +36,7 @@ struct cadastro_conta conta;
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite seu CPF:\n                                  |\n");
-    scanf("%s", &conta.cpf);
+    scanf("%ld", aln->CPF);
     getchar();
     printf(".=============================================================================.\n");
     system("clear||cls"); 
@@ -41,14 +46,21 @@ struct cadastro_conta conta;
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite sua senha: (apenas números)\n               |\n");
-    scanf("%s", &conta.password);
+    scanf("%ld", aln->password);
     system("clear||cls");
     getchar();
-    printf("\n Nome: %s", conta.nome);
-    printf("\n CPF: %s\n", conta.cpf);
-    printf("\n Senha: %s", conta.password);
-    getchar();
-//por os "." e "-" no CPF
+    aln->status = 'm';
+    return aln;
+}
 
-return 0;
+void gravaAluno(Salva* aln) {
+    FILE* fps;
+    fps = fopen("contas.dat", "ab");
+    if (fps == NULL){
+        printf("Ops ! Ocorreu um erro na abertura do arquivo!\n");
+        printf("não é possível continuar este programa....\n");
+        exit(1);
+    }
+    fwrite(aln, sizeof(Salva), 1, fps);
+    fclose(fps);
 }
