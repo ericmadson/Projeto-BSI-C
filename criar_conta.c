@@ -6,25 +6,12 @@
 #include "validacao_senha.h"
 #include "criar_conta.h"
 
-typedef struct cadastro_conta Salva;
-
-Salva* preencheAluno(void);
-void gravaAluno(Salva*);
-
 void tela_cadastro(void) {
     Salva* fulano;
     fulano = preencheAluno();
     gravaAluno(fulano);
     free(fulano);
 }
-
-struct cadastro_conta {
-    char nome[80];
-    char CPF[20];
-    char password[7];
-    char status;
-};
-
 
 struct cadastro_conta;
 Salva* preencheAluno(void){
@@ -72,6 +59,8 @@ void gravaAluno(Salva* aln) {
   fwrite(aln, sizeof(Salva), 1, fp);
   fclose(fp);
 }
+
+//exibir as informacoes
 
 //modulo 1 tela final (se não funcionar)
 
