@@ -8,13 +8,13 @@
 
 void tela_cadastro(void) {
     Salva* fulano;
-    fulano = preencheAluno();
-    gravaAluno(fulano);
+    fulano = SalvaConta();
+    gravacao(fulano);
     free(fulano);
 }
 
 struct cadastro_conta;
-Salva* preencheAluno(void){
+Salva* SalvaConta(void){
     Salva* aln;
     aln = (Salva*) malloc(sizeof(Salva));
     system("clear||cls");
@@ -38,19 +38,30 @@ Salva* preencheAluno(void){
     system("clear||cls"); 
     printf("\n");
     printf("|=============================================================================|\n");
-    printf("|                                                                           |\n");
+    printf("|                                                                             |\n");
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite sua senha: (apenas números)\n               |\n");
     scanf(" %20[^\n]", aln->password);
     system("clear||cls");
     aln->status = 'm';
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                                                                             |\n");
+    printf("|       %s\n" ,aln-> nome);  
+    printf("|       %s\n", aln ->CPF );                                                                          
+    printf("|       %s\n", aln ->password);                                                 
+    printf("|                   As informações acima estão corretas ?                     |\n"); 
+    printf("|                                                                             |\n");                                              
+    printf(".=============================================================================.\n");
+    getchar();
     return aln;
 }
 
-void gravaAluno(Salva* aln) {
+void gravacao(Salva* aln) {
   FILE* fp;
-  fp = fopen("alunos.dat", "ab");
+  fp = fopen("contas.dat", "ab");
   if (fp == NULL) {
     printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
     printf("Não é possível continuar este programa...\n");
@@ -59,6 +70,8 @@ void gravaAluno(Salva* aln) {
   fwrite(aln, sizeof(Salva), 1, fp);
   fclose(fp);
 }
+
+
 
 //exibir as informacoes
 

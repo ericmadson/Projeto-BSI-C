@@ -9,6 +9,6 @@ struct cadastro_conta {
     char status;
 };
 
-Salva* preencheAluno(void);
-void gravaAluno(Salva*);
+Salva* SalvaConta(void);
+void gravacao(Salva*);
 Salva* buscaCliente(void);
