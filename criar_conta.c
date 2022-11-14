@@ -52,9 +52,10 @@ Salva* SalvaConta(void){
     printf("|       %s\n" ,aln-> nome);  
     printf("|       %s\n", aln ->CPF );                                                                          
     printf("|       %s\n", aln ->password);                                                 
-    printf("|                   As informações acima estão corretas ?                     |\n"); 
-    printf("|                                                                             |\n");                                              
+    printf("|                   As informações acima estão corretas ? (S/N)               |\n"); 
+    scanf("|                                                                              |\n");                                              
     printf(".=============================================================================.\n");
+    getchar();
     getchar();
     return aln;
 }
@@ -70,9 +71,6 @@ void gravacao(Salva* aln) {
   fwrite(aln, sizeof(Salva), 1, fp);
   fclose(fp);
 }
-
-
-
 //exibir as informacoes
 
 //modulo 1 tela final (se não funcionar)

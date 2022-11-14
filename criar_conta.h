@@ -1,5 +1,6 @@
 //assinatura das funções
 
+
 void tela_cadastro(void);
 typedef struct cadastro_conta Salva;
 struct cadastro_conta {
