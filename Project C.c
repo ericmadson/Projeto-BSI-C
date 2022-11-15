@@ -4,7 +4,6 @@
 #include "criar_conta.h"
 #include "entrar_conta.h"
 #include "mudar_senha.h"
-#include "deletar_conta.h"
 #include "tela_equipe.h"
 #include "tela_sobre.h"
 #include "menu_conta.h"

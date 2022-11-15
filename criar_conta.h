@@ -13,3 +13,8 @@ struct cadastro_conta {
 Salva* SalvaConta(void);
 void gravacao(Salva*);
 Salva* buscaCliente(void);
+
+void excluirConta(void);
+Salva* buscaConta(void);
+void deletar_conta(void);
+void deletar_nao(void);

@@ -14,6 +14,7 @@ void tela_cadastro(void) {
 }
 
 struct cadastro_conta;
+
 Salva* SalvaConta(void){
     Salva* aln;
     aln = (Salva*) malloc(sizeof(Salva));
