@@ -8,55 +8,6 @@ void deletar_conta(void) {
     char CPF[30];
     char password[6];
     Salva* fulano;
-    
-    system("clear||cls");   
-    /* COLOCAR MENSAGEM DE BUSCA DE CPF NA FUNÇAO DE EXCLUIR */
-    /* printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
-    printf("|                                                                             |\n");
-    printf("|                   Digite o CPF da conta a ser deletada:\n                   |\n");
-    scanf("%s", CPF);
-    getchar();
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
-    printf("|                                                                             |\n");
-    printf("|                  Digite a senha da conta a ser deletada:\n                  |\n");
-    scanf("%s", password);
-    getchar(); */
-    excluirConta();
-    printf(".=============================================================================.\n");
-    printf("\n");
-    system("clear||cls");
-    /* SUBSTITUIR ESSA MENSAGEM DE AGRADECIMENTO PELA MENSAGEM DA FUNÇÃO ABAIXO */    
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|              = = = = = Conta deletada com sucesso ! = = = = =               |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [Obrigado por confiar em nossos serviços]\n                 |\n");
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
-}
-void tela_nao(void) {
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|           = = = = = Não foi possivel deletar a conta ! = = = = =            |\n");
-    printf("|                                                                             |\n");
-    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n");
 }
 
 void excluirConta(void) {
@@ -68,22 +19,42 @@ void excluirConta(void) {
   char senha[7];
   fp = fopen("contas.dat", "r+b");
   if (fp == NULL) {
-    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
-    printf("Não é possível continuar o programa...\n");
-    exit(1);
+  printf("\n\n");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = ocorreu um erro !!! = = = = =                   |\n");
+  printf("|                                                                             |\n");
+  printf("|                     Não foi possível abrir o arquivo !                      |\n");
+  printf("|                                                                             |\n");  
+  printf(".=============================================================================.\n");
+  printf("\n");
+  getchar();
+  getchar();
+  exit(1);
   }
-  printf("\n\n");
-  printf("= = = S G P e t = = = \n");
-  printf("= = Apagar Animal = = \n");
-  printf("= = = = = = = = = = = \n");
-  printf("Informe o cpf da conta a ser apagada: ");
-  scanf(" %14[^\n]", procurado);
-  printf("\n\n");
-  printf("= = = S G P e t = = = \n");
-  printf("= = Apagar Animal = = \n");
-  printf("= = = = = = = = = = = \n");
-  printf("Informe a senha da conta a ser apagada: ");
-  scanf(" %14[^\n]", senha);
+    printf("\n\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
+    printf("|                                                                             |\n");
+    printf("|                   Digite o CPF da conta a ser deletada:\n                   |\n");
+    scanf(" %14[^\n]", procurado);
+    getchar();
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
+    printf("\n\n");
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|              = = = = = buscando conta a ser deletada = = = = =              |\n");
+    printf("|                                                                             |\n");
+    printf("|                  Digite a senha da conta a ser deletada:\n                  |\n");
+    scanf(" |%14[^\n]", senha);
+    printf(".=============================================================================.\n");
+    getchar();
+    getchar();
   aln = (Salva*) malloc(sizeof(Salva));
   achou = 0;
   while((!achou) && (fread(aln, sizeof(Salva), 1, fp))) {
@@ -98,18 +69,44 @@ void excluirConta(void) {
       aln->status = '0';
       fseek(fp, (-1)*sizeof(Salva), SEEK_CUR);
       fwrite(aln, sizeof(Salva), 1, fp);
-      printf("\nConta excluída com sucesso!!!\n");
+      printf(".=============================================================================.\n");
+      printf("\n");
+      system("clear||cls"); 
+      printf("\n");
+      printf("|=============================================================================|\n");
+      printf("|                                                                             |\n");
+      printf("|              = = = = = Conta deletada com sucesso ! = = = = =               |\n");
+      printf("|                                                                             |\n");
+      printf("|                 [Obrigado por confiar em nossos serviços]\n                 |\n");
+      getchar();
+      printf(".=============================================================================.\n");
+      printf("\n");
       getchar();
       getchar();
      } else {
-      /* FAZER NOVA TELA NOS PADRÕES */
-       printf("\nOk, os dados não foram alterados\n");
-       getchar();
-       getchar();
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|           = = = = = = = = = Conta não deletada ! = = = = = = = = =          |\n");
+    printf("|                                                                             |\n");
+    printf("|            [Seus dados continuarão salvos em nosso sistema !]\n             |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    getchar();
+    getchar();
      }
   } else {
-    /* FAZER NOVA TELA NOS PADRÕES */
-    printf("A conta não foi encontrada!");
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|           = = = = = Não foi possivel deletar a conta ! = = = = =            |\n");
+    printf("|                                                                             |\n");
+    printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
+    getchar();
+    printf(".=============================================================================.\n");
+    printf("\n");
     getchar();
     getchar();
   }
