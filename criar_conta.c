@@ -45,7 +45,7 @@ Salva* SalvaConta(void){
     printf("|                          Digite sua senha: (apenas números)\n               |\n");
     scanf(" %20[^\n]", aln->password);
     system("clear||cls");
-    aln->status = 'm';
+    aln->status = '1';
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");

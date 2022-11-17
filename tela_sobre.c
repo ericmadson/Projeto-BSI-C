@@ -4,7 +4,6 @@
 // modulo 5 
 void tela_sobre(void) {
     system("clear||cls");
-    printf("\n");
     printf(".=============================================================================.\n");
     printf("|                                                                             |\n");
     printf("|             Universidade Federal do Rio Grande do Norte                     |\n");
@@ -28,5 +27,4 @@ void tela_sobre(void) {
     printf("|                                                                             |\n");    
     printf(".=============================================================================.\n");
     getchar();
-    printf("\n");
 }
