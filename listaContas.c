@@ -21,9 +21,11 @@ void listaContas(void) {
   printf("= = = = = = = = = = = \n");
   conta = (Salva*) malloc(sizeof(Salva));
   while(fread(conta, sizeof(Salva), 1, fp) == 1) {
-        if (conta->status == '1') {
+      if (conta->status == '1') {
       exibeConta(conta);
       scanf("%c", &out);
+    } else {
+      printf("AAAAAAAAAAAAAA");
     }
     }
   fclose(fp);

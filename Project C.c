@@ -34,15 +34,15 @@ int main(void) {
                 break;
         
             case 5:   
-                tela_sobre();
+                listaContas();
                 break;
             
             case 6:   
-                tela_equipe();
+                tela_sobre();
                 break;
 
             case 7: 
-                listaContas();
+                tela_equipe();
                 break;
         } 	
     } while (opcao != 0);
@@ -71,8 +71,9 @@ char tela_conta(void) {
     printf("|              2. Entrar na conta                                             |\n");
     printf("|              3. Mudar senha                                                 |\n");
     printf("|              4. Deletar conta                                               |\n");
-    printf("|              5. Sobre                                                       |\n");
-    printf("|              6. Equipe                                                      |\n");
+    printf("|              5. Listar contas                                               |\n");    
+    printf("|              6. Sobre                                                       |\n");
+    printf("|              7. Equipe                                                      |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");

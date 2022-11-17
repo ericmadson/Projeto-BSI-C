@@ -14,7 +14,7 @@ void exibeConta(Salva* conta) {
 
 void excluirConta(void) {
   FILE* fp;
-  Salva* aln;
+  Salva* conta;
   int achou;
   char resp;
   char out;
@@ -27,46 +27,70 @@ void excluirConta(void) {
     exit(1);
   }
   printf("\n\n");
-  printf("= = = S G P e t = = = \n");
-  printf("= = Apagar aln = = \n");
-  printf("= = = = = = = = = = = \n");
-  printf("Informe o CPF do aln a ser apagado: ");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Exclusão de conta = = = = =                     |\n");
+  printf("|                                                                             |\n");
+  printf("|                 Digite o CPF da conta que será deletada:                    |");
   scanf(" %14[^\n]", procurado);
+  printf(".=============================================================================.\n");
   printf("\n\n");
-  printf("= = = S G P e t = = = \n");
-  printf("= = Apagar aln = = \n");
-  printf("= = = = = = = = = = = \n");
-  printf("Informe a senha do aln a ser apagado: ");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                    = = = = = Exclusão de conta = = = = =                    |\n");
+  printf("|                                                                             |\n");
+  printf("|                 Digite a senha da conta que será deletada:\n                |\n");
   scanf(" %14[^\n]", senha);
-  aln = (Salva*) malloc(sizeof(Salva));
+  printf(".=============================================================================.\n");
+  conta = (Salva*) malloc(sizeof(Salva));
   achou = 0;
-  while((!achou) && (fread(aln, sizeof(Salva), 1, fp))) {
-   if ((strcmp(aln->CPF, procurado) == 0) && (strcmp(aln->password, senha) == 0) && (aln->status == '1')) {
+  while((!achou) && (fread(conta, sizeof(Salva), 1, fp))) {
+   if ((strcmp(conta->CPF, procurado) == 0) && (strcmp(conta->password, senha) == 0) && (conta->status == '1')) {
      achou = 1;
    }
   }
   if (achou) {
-    exibeConta(aln);
+    exibeConta(conta);
     getchar();
-    printf("Deseja realmente apagar este aln (s/n)? ");
-    scanf("%c", &resp);
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                    = = = = = Exclusão de conta = = = = =                    |\n");
+  printf("|                                                                             |\n");
+  printf("|                 Deseja realmente deletar essa conta ? (S/N):\n              |\n");
+  scanf("%c", &resp);
+  printf(".=============================================================================.\n");;
     if (resp == 's' || resp == 'S') {
-      aln->status = '0';
+      conta->status = '0';
       fseek(fp, (-1)*sizeof(Salva), SEEK_CUR);
-      fwrite(aln, sizeof(Salva), 1, fp);
-      printf("\naln excluído com sucesso!!!\n");
-      scanf("%c", &out);
-      getchar();
+      fwrite(conta, sizeof(Salva), 1, fp);
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                    = = = = = Exclusão de conta = = = = =                    |\n");
+  printf("|                                                                             |\n");
+  printf("|                        Conta Excluida com sucesso !!!:\n                    |\n");
+  scanf("%c", &out);
+  printf(".=============================================================================.\n");
+  getchar();
      } else {
-       printf("\nOk, os dados não foram alterados\n");
-       scanf("%c", &out);
-       getchar();
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                    = = = = = Exclusão revogada = = = = =                    |\n");
+  printf("|                                                                             |\n");
+  printf("|                    Seus dados permanecem inalterados !!!:\n                  |\n");
+  scanf("%c", &out);
+  printf(".=============================================================================.\n");
+  getchar();
      }
   } else {
-    printf("O aln não foi encontrado...\n");
-    scanf("%c", &out);
-    getchar();
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                    = = = = = Exclusão revogada = = = = =                    |\n");
+  printf("|                                                                             |\n");
+  printf("|                           Conta não encontrada !!!:\n                       |\n");
+  scanf("%c", &out);
+  printf(".=============================================================================.\n");
+  getchar();
   }
-  free(aln);
+  free(conta);
   fclose(fp);
 }
