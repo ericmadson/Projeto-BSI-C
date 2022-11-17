@@ -6,7 +6,6 @@
 //modulo 6
 void tela_equipe(void) {
     system("clear||cls");   
-    printf("\n");
     printf(".=============================================================================.\n");
     printf("|                                                                             |\n");
     printf("|               Universidade Federal do Rio Grande do Norte                   |\n");
@@ -33,6 +32,5 @@ void tela_equipe(void) {
     printf("|              Git: https://github.com/ericmadson                             |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
-    getchar();
-    printf("\n");                                                                           
+    getchar();                                                                          
 }  

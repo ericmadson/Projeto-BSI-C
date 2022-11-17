@@ -14,6 +14,10 @@ Salva* SalvaConta(void);
 void gravacao(Salva*);
 Salva* buscaCliente(void);
 
+void exibeConta(Salva*);
+
+void listaContas(void);
+void tela_nao(void);
 void excluirConta(void);
 Salva* buscaConta(void);
 void deletar_conta(void);

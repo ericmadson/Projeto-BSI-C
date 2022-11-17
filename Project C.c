@@ -7,47 +7,51 @@
 #include "tela_equipe.h"
 #include "tela_sobre.h"
 #include "menu_conta.h"
+#include "deletar_conta.h"
 char tela_conta();
 
 // Programa principal
 int main(void) {
-    char opcao;
+    int opcao;
 
     do {
         opcao = tela_conta();
         switch(opcao) {
-            case '1':  
+            case 1:  
                 tela_cadastro();
                 break;
 
-            case '2':   
+            case 2:   
                 entrar_conta();
                 break;
             
-            case '3':   
+            case 3:   
                 mudar_senha();
                 break;
             
-            case '4':   
-                deletar_conta();
+            case 4:   
+                excluirConta();
                 break;
         
-            case '5':   
+            case 5:   
                 tela_sobre();
                 break;
             
-            case '6':   
+            case 6:   
                 tela_equipe();
                 break;
+
+            case 7: 
+                listaContas();
+                break;
         } 	
-    
-    } while (opcao != '0');
+    } while (opcao != 0);
 
     return 0;
 }
 
 char tela_conta(void) {
-    char op;
+    int op;
     system("clear||cls");
     printf("\n");
     printf(".=============================================================================.\n");
@@ -73,8 +77,7 @@ char tela_conta(void) {
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     printf("               Escolha uma opção acima: ");
-    scanf("%c", &op);
+    scanf("%d", &op);
     getchar();
-    printf("\n");
     return op;
 }
