@@ -6,10 +6,14 @@
 #include "deletar_conta.h"
 
 void exibeConta(Salva* conta) {
-  // aprimorar tela de exibição para o padrão
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                 = = = = = Informações da conta = = = = =                    |\n");
+  printf("|                                                                             |\n");
   printf("Nome: %s\n", conta->nome);
   printf("CPF: %s\n", conta->CPF);
   printf("Senha: %s\n", conta->password);
+  printf(".=============================================================================.\n");
 }
 
 void excluirConta(void) {
@@ -22,9 +26,13 @@ void excluirConta(void) {
   char senha[20];
   fp = fopen("contas.dat", "r+b");
   if (fp == NULL) {
-    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
-    printf("Não é possível continuar o programa...\n");
-    exit(1);
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
+  printf("|                                                                             |\n");
+  printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
+  printf(".=============================================================================.\n");
+  exit(1);
   }
   printf("\n\n");
   printf("|=============================================================================|\n");
@@ -74,7 +82,7 @@ void excluirConta(void) {
      } else {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Exclusão revogada = = = = =                    |\n");
+  printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
   printf("|                    Seus dados permanecem inalterados !!!:\n                  |\n");
   scanf("%c", &out);
@@ -84,9 +92,9 @@ void excluirConta(void) {
   } else {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Exclusão revogada = = = = =                    |\n");
+  printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
-  printf("|                           Conta não encontrada !!!:\n                       |\n");
+  printf("|                         Conta não encontrada !!!:\n                         |\n");
   scanf("%c", &out);
   printf(".=============================================================================.\n");
   getchar();

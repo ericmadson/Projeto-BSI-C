@@ -65,9 +65,13 @@ void gravacao(Salva* conta) {
   FILE* fp;
   fp = fopen("contas.dat", "ab");
   if (fp == NULL) {
-    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
-    printf("Não é possível continuar este programa...\n");
-    exit(1);
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Criação revogada = = = = =                      |\n");
+  printf("|                                                                             |\n");
+  printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
+  printf(".=============================================================================.\n");
+  exit(1);
   }
   fwrite(conta, sizeof(Salva), 1, fp);
   fclose(fp);
