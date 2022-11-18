@@ -22,7 +22,7 @@ void tela_equipe(void) {
     printf("|              This project was developed by:                                 |\n");
     printf("|                                                                             |\n");
     printf("|              Gabriel D. Oliveira                                            |\n");
-    printf("|              E-mail: Gabreelzinn@gmail.com                                  |\n");
+    printf("|              E-mail: GabrielDias7820@gmail.com                              |\n");
     printf("|              Redes sociais: @igwbriel                                       |\n");
     printf("|              Git: https://github.com/Igwbriel                               |\n");
     printf("|                                                                             |\n"); 
@@ -30,7 +30,15 @@ void tela_equipe(void) {
     printf("|              E-mail: Ericmadson67@hotmail.com                               |\n");
     printf("|              Redes sociais: @ericmadsonn                                    |\n");
     printf("|              Git: https://github.com/ericmadson                             |\n");
+    printf("|_____________________________________________________________________________|\n");
+    printf("|              With contributions by:                                         |\n");
+    printf("|                                                                             |\n");    
+    printf("|              Isa Kaillany                                                   |\n");
+    printf("|              Git: https://github.com/ViniciusMaiaM                          |\n");
     printf("|                                                                             |\n");
+    printf("|              Vinicius Maia Marinho                                          |\n");
+    printf("|              Git: https://github.com/IsaKaillany                            |\n");
+    printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
     getchar();                                                                          
 }  

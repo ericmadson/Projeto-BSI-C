@@ -16,7 +16,7 @@ int entrar_conta(void) {
     printf("|                                                                             |\n");
     printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
     printf("|                                                                             |\n");
-    printf("|                              Digite seu CPF:\n                              |\n");
+    printf("|                              Digite seu CPF:  ");
     scanf("%s", cpf);
     getchar();
     printf(".=============================================================================.\n");
@@ -27,10 +27,10 @@ int entrar_conta(void) {
     printf("|                                                                             |\n");
     printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
     printf("|                                                                             |\n");
-    printf("|                             Digite sua senha:\n                             |\n");
+    printf("|                             Digite sua senha: ");
     scanf("%s", senha);
-    getchar();
     printf(".=============================================================================.\n");
+    getchar();
     validarDados = buscarConta(cpf, senha);
     if (!validarDados) {
         entrar_nao();
@@ -38,22 +38,40 @@ int entrar_conta(void) {
     }
     else {
     printf("\n"); 
-    system("clear||cls");   
-    printf("\n");
+    system("cls");   
+    printf("\n\n\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                  = = = = = carregando sua conta = = = = =                   |\n");
+    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
+    printf("|                           ______________________                            |\n");
+    printf("|                    ->     |//////              |     <-                     |\n");
     printf("|                                                                             |\n");
-    printf("|                                 °\n                                         |\n");
-    sleep(1);
-    printf("|                                       °\n                                   |\n");
+    printf("|=============================================================================|\n");
     sleep(2);
-    printf("|                                 °\n                                         |\n");
-    sleep(3);
-    printf("|                                [pronto]                                     |\n");
-    getchar();
-    printf(".=============================================================================.\n");
+    system("cls");
+    printf("\n\n\n");   
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
+    printf("|                           ______________________                            |\n");
+    printf("|                    ->     |//////////////      |     <-                     |\n");
+    printf("|                                                                             |\n");   
+    printf("|=============================================================================|\n");    
+    sleep(2);
+    system("cls");
+    printf("\n\n\n");       
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
+    printf("|                           ______________________                            |\n");    
+    printf("|                    ->     |////////////////////|     <-                     |\n");
+    printf("|                                                                             |\n");    
+    printf("|=============================================================================|\n");
+    sleep(2);
     printf("\n");
+    printf(".              ===================== Enter =====================.\n");
+    printf("\n");
+    getchar();
     menu_conta(); 
     }
     return 0;
