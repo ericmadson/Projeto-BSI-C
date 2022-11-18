@@ -15,9 +15,16 @@ void listaContas(void) {
   printf("|                                                                             |\n");
   printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
+  printf("|                     Aquilo que parecia impossível                           |\n");
+  printf("|                     Aquilo que parecia não ter saída                        |\n");    
+  printf("|                     Aquilo que parecia ser minha morte                      |\n");                         
+  printf("|                     Mas Jesus mudou minha sorte                             |\n");                         
+  printf("                      Sou um milagre e estou aqui                             |\n");
+  printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:                 |\n");
   printf(".=============================================================================.\n");
-  exit(1);
+  scanf("%c", &out);
+ 
   }
   printf("\n\n");
   printf("|=============================================================================|\n");

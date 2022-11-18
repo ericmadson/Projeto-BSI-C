@@ -1,1 +1,1 @@
-int cpfvalidation();
+int CPFvalidation(char*);

@@ -1,60 +1,74 @@
 #include <stdio.h>
-#include "validacao_CPF.h"
+#include"validacao_CPF.h"
+#include <stdlib.h>
+#include <string.h>
+#include "criar_conta.h"
 
-int cpfvalidation() {
-char cpf[12];
-int icpf[12];
-int i, somador = 0, digito1, result1, result2, digito2,valor;
-    printf("digite o CPF: ");
-    scanf("%s", cpf);
 
-//efetua a conversão de array de char pra um array de int
-for (i = 0; i < 11; i++)
-{
-    icpf[i] = cpf[i] -48;
-}
-
-//primeiro digito
-for (i = 0; i < 9; i++)
-{
-    somador += icpf[i]*(10-i);  
-}
-
-result1  = somador%11;
-if ( (result1 == 0) || (result1 == 1) )
-{
-    digito1 = 0;    
-}
-else{
-    digito1 = 11-result1;
-}
-
-//segundo digito
-somador = 0;
-for (i = 0; i < 10; i++)
-{
-    somador+=icpf[i]*(11-i);
-}
-valor = (somador/11)*11;
-result2=somador-valor;
-
-if ((result2 == 0) || result2 == 1)
-{
-    digito2=0;  
-}
-
-else{
-    digito2=11-result2;
-}
-
-//resultado da validação
-
-if ((digito1==icpf[9]) && (digito2==icpf[10]))
-{
-   printf("\n CPF válido! \n");
-}
-else{
-    printf("\n CPF inválido! \n");
-}
-return 1;
-}
+int CPFvalidation(char *cpf){
+  int i, j, digito1 = 0, digito2 =0;
+  if(strlen(cpf) !=11) 
+  {
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite um CPF válido:\n                            |\n");
+    return 0;
+  }
+  else if((strcmp(cpf,"00000000000") == 0) || (strcmp(cpf,"11111111111") == 0) || (strcmp(cpf,"22222222222") == 0) ||(strcmp(cpf,"33333333333") == 0) || (strcmp(cpf,"44444444444") == 0) || (strcmp(cpf,"55555555555") == 0) ||(strcmp(cpf,"66666666666") == 0) || (strcmp(cpf,"77777777777") == 0) || (strcmp(cpf,"88888888888") == 0) ||(strcmp(cpf,"99999999999") == 0))
+  {
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite um CPF válido:\n                            |\n");
+    return 0;
+  }
+  else {
+    for(i = 0, j = 10; i < strlen(cpf)-2; i++, j--)
+        digito1 += (cpf[i]-48) * j;
+    digito1 %= 11;
+    if(digito1 < 2)
+        digito1 = 0;
+    else
+        digito1 = 11 - digito1;
+    if((cpf[9]-48) != digito1) 
+  {
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite um CPF válido:\n                            |\n");
+    return 0;
+  }
+    else 
+    {
+      for(i = 0, j = 11; i < strlen(cpf)-1; i++, j--)
+    digito2 += (cpf[i]-48) * j;
+    digito2 %= 11;
+    if(digito2 < 2)
+        digito2 = 0;
+    else
+        digito2 = 11 - digito2;
+    if((cpf[10]-48) != digito2)
+    {
+    system("clear||cls");   
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                                                                             |\n");
+    printf("|                          Digite um CPF válido:\n                            |\n");
+    return 0;
+    }
+    }
+    }
+    return 1;
+    }

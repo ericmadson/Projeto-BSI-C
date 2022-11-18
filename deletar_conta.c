@@ -39,7 +39,7 @@ void excluirConta(void) {
   printf("|                                                                             |\n");
   printf("|                   = = = = = Exclusão de conta = = = = =                     |\n");
   printf("|                                                                             |\n");
-  printf("|                 Digite o CPF da conta que será deletada:                    |");
+  printf("|                 Digite o CPF da conta que será deletada:                    |\n");
   scanf(" %14[^\n]", procurado);
   printf(".=============================================================================.\n");
   printf("\n\n");
@@ -84,7 +84,7 @@ void excluirConta(void) {
   printf("|                                                                             |\n");
   printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
-  printf("|                    Seus dados permanecem inalterados !!!:\n                  |\n");
+  printf("|                    Seus dados permanecem inalterados !!!:\n                 |\n");
   scanf("%c", &out);
   printf(".=============================================================================.\n");
   getchar();
