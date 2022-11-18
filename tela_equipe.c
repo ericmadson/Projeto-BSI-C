@@ -34,3 +34,5 @@ void tela_equipe(void) {
     printf(".=============================================================================.\n");
     getchar();                                                                          
 }  
+
+//adicionar os colaboradores Isa e Viniçada

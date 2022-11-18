@@ -8,7 +8,7 @@
 
 int validacao_senha(char password[7]) {
     char pw = (int)strlen(password);
-  if ((int)strlen(password) > 6) {
+  if (((int)strlen(password) > 6) || ((int)strlen(password) < 6)) {
             system("clear||cls");   
             printf("\n");
             printf("|=============================================================================|\n");

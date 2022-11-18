@@ -63,13 +63,16 @@ Salva* SalvaConta(void){
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criação de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite sua senha: (apenas números)\n               |\n");
+    printf("|                       Digite sua senha: (apenas números)\n                  |\n");
+   do
+   {
+    printf("Digite uma senha valida: ");
     scanf(" %20[^\n]", conta->password);
-    validarSenha = validacao_senha(conta->password);
-    if (validarSenha == 0) {
-      return 0;
-    } 
+    getchar();
+   } 
+   while (!(validarSenha = validacao_senha(conta->password)));
     validarDados = buscarConta(conta->CPF, conta->password);
+
     if (validarDados == 1) {
     system("clear||cls"); 
     printf("\n");
@@ -132,4 +135,4 @@ void gravacao(Salva* conta) {
   fclose(fp);
 }
 
-// Brennus e isa
+//  Isa
