@@ -1,1 +1,1 @@
-void validacao_senha(char password[]);
+int validacao_senha(char password[7]);

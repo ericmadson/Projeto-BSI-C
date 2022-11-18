@@ -1,7 +1,7 @@
 //assinatura das funções
 
 
-void tela_cadastro(void);
+int tela_cadastro(void);
 typedef struct cadastro_conta Salva;
 struct cadastro_conta {
     char nome[80];
@@ -12,14 +12,13 @@ struct cadastro_conta {
 // gravação de conta
 Salva* SalvaConta(void);
 void gravacao(Salva*);
-Salva* buscaCliente(void);
 void exibeConta(Salva*);
 
 // deletar conta
-void listaContas(void);
+int listaContas(void);
 void tela_nao(void);
 void excluirConta(void);
-Salva* buscaConta(void);
+int buscarConta(char CPF[12], char senha[7]);
 void deletar_conta(void);
 void deletar_nao(void);
 

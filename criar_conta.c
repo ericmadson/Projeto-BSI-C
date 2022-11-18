@@ -7,11 +7,17 @@
 #include "validacao_CPF.h"
 #include "criar_conta.h"
 
-void tela_cadastro(void) {
+int tela_cadastro(void) {
     Salva* fulano;
     fulano = SalvaConta();
-    gravacao(fulano);
-    free(fulano);
+    if (fulano == 0) {
+      return 0;
+    }
+    else {
+      gravacao(fulano);
+      free(fulano);
+    }
+    return 0;
 }
 
 struct cadastro_conta;
@@ -20,6 +26,8 @@ Salva* SalvaConta(void){
     Salva* conta;
     char out;
     char resp;
+    int validarSenha;
+    int validarDados;
     int cpfvalidation;
     conta = (Salva*) malloc(sizeof(Salva));
     system("clear||cls");
@@ -43,15 +51,11 @@ Salva* SalvaConta(void){
     scanf(" %11[^\n]", conta->CPF);
     getchar();
     cpfvalidation = CPFvalidation(conta->CPF);
+    if (strcmp(conta->CPF, "0") == 0) {
+      cpfvalidation = 1;
+      return 0;
+    }
    } while (!cpfvalidation);
-
-	if ((cpfvalidation) == 1){
-		printf("| CPF ACEITO E CORRETO");
-    getchar();
-	} else {
-		printf("| CPF INCORRETO, TENTE NOVAMENTE !");
-    getchar();
-	} 
     printf(".=============================================================================.\n");
     system("clear||cls"); 
     printf("\n");
@@ -61,7 +65,22 @@ Salva* SalvaConta(void){
     printf("|                                                                             |\n");
     printf("|                          Digite sua senha: (apenas números)\n               |\n");
     scanf(" %20[^\n]", conta->password);
+    validarSenha = validacao_senha(conta->password);
+    if (validarSenha == 0) {
+      return 0;
+    } 
+    validarDados = buscarConta(conta->CPF, conta->password);
+    if (validarDados == 1) {
+    system("clear||cls"); 
+    printf("\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                                                                             |\n");
+    printf("|                     Dados utilizados em conta já existente!\n               |\n");
     getchar();
+    return 0;
+    };
     system("clear||cls");
     conta->status = '1';
     printf("|=============================================================================|\n");
@@ -83,7 +102,7 @@ Salva* SalvaConta(void){
       printf("|                        Conta criada com sucesso !!!                         |\n");
       scanf("%c", &out);
       printf(".=============================================================================.\n");
-      getchar();  
+      return conta;
     }else {
       printf("|=============================================================================|\n");
       printf("|                                                                             |\n");
@@ -92,9 +111,9 @@ Salva* SalvaConta(void){
       printf("|                  Criação de conta cancelada com sucesso !!!:\n              |\n");
       scanf("%c", &out);
       printf(".=============================================================================.\n");
-      getchar();
+      return 0;
   }
-    return conta;
+    return 0;
 }
 
 void gravacao(Salva* conta) {

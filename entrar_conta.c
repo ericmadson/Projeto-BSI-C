@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "entrar_conta.h"
+#include "criar_conta.h"
 #include "menu_conta.h"
 
-void entrar_conta(void) {
-    char cpf[20];
-    char senha[6];
+int entrar_conta(void) {
+    char cpf[12];
+    char senha[7];
+    int validarDados;
     
     system("clear||cls");   
     printf("\n");
@@ -29,6 +31,12 @@ void entrar_conta(void) {
     scanf("%s", senha);
     getchar();
     printf(".=============================================================================.\n");
+    validarDados = buscarConta(cpf, senha);
+    if (!validarDados) {
+        entrar_nao();
+        return 0;
+    }
+    else {
     printf("\n"); 
     system("clear||cls");   
     printf("\n");
@@ -47,6 +55,8 @@ void entrar_conta(void) {
     printf(".=============================================================================.\n");
     printf("\n");
     menu_conta(); 
+    }
+    return 0;
 }
 //modulo 2 tela final se funcionar 
 void entrar_nao(void) {
@@ -55,11 +65,10 @@ void entrar_nao(void) {
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|            = = = = = nao foi possivel entrar na conta ! = = = = =           |\n");
+    printf("|            = = = = = Não foi possivel entrar na conta ! = = = = =           |\n");
     printf("|                                                                             |\n");
     printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
     scanf("%c", &op);
-    getchar();
     printf(".=============================================================================.\n");
     printf("\n");
 } 

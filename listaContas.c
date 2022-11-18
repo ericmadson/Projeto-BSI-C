@@ -5,27 +5,24 @@
 #include "criar_conta.h"
 #include "deletar_conta.h"
 
-void listaContas(void) {
+int listaContas(void) {
   FILE* fp;
   Salva* conta;
   char out;
   fp = fopen("contas.dat", "rb");
   if (fp == NULL) {
+  system("clear||cls");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
   printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
-  printf("|                     Aquilo que parecia impossível                           |\n");
-  printf("|                     Aquilo que parecia não ter saída                        |\n");    
-  printf("|                     Aquilo que parecia ser minha morte                      |\n");                         
-  printf("|                     Mas Jesus mudou minha sorte                             |\n");                         
-  printf("                      Sou um milagre e estou aqui                             |\n");
   printf("|                                                                             |\n");
-  printf("|                   Ocorreu um erro na abertura do arquivo !:                 |\n");
+  printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
   printf(".=============================================================================.\n");
   scanf("%c", &out);
- 
+  return 0;
   }
+  system("clear||cls");
   printf("\n\n");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
@@ -39,6 +36,17 @@ void listaContas(void) {
       scanf("%c", &out);
     }
     }
+  if (fread(conta, sizeof(Salva), 1, fp) == 0) {
+  system("clear||cls");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Fim da listagem = = = = =                       |\n");
+  printf("|                                                                             |\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  return 0;
+  }
   fclose(fp);
   free(conta);
+  return 0;
 }
