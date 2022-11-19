@@ -34,13 +34,14 @@ void tela_equipe(void) {
     printf("|              With contributions by:                                         |\n");
     printf("|                                                                             |\n");    
     printf("|              Isa Kaillany                                                   |\n");
-    printf("|              Git: https://github.com/ViniciusMaiaM                          |\n");
+    printf("|              Git: https://github.com/IsaKaillany                            |\n");
     printf("|                                                                             |\n");
     printf("|              Vinicius Maia Marinho                                          |\n");
-    printf("|              Git: https://github.com/IsaKaillany                            |\n");
+    printf("|              Git: https://github.com/ViniciusMaiaM                          |\n");
+    printf("|                                                                             |\n");
+    printf("|              Breno Porfirio                                                 |\n");
+    printf("|              Git: https://github.com/BrenoPorfirio                          |\n");
     printf("|                                                                             |\n"); 
     printf(".=============================================================================.\n");
     getchar();                                                                          
 }  
-
-//adicionar os colaboradores Isa e Viniçada
