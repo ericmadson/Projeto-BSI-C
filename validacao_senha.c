@@ -13,12 +13,11 @@ int validacao_senha(char password[7]) {
             printf("\n");
             printf("|=============================================================================|\n");
             printf("|                                                                             |\n");
-            printf("|                    = = = = =  Senha invalida ! = = = = =                    |\n");
+            printf("|               = = = = = Falha na criacao da conta ! = = = = =               |\n");
             printf("|                                                                             |\n");
-            printf("|                Senha ou nome invalidos, tente novamente                     |\n");
-            printf("|                                                                             |\n");
-            printf(".=============================================================================.\n");
+            printf("|                   Digite a nova senha da sua conta: ");
             getchar();
+            printf(".=============================================================================.\n");
             printf("\n");
             return 0;
         }

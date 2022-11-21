@@ -461,7 +461,7 @@ int entrar_conta(void) {
 
 
     printf("\n");
-    printf(".              ===================== Enter =====================.\n");
+    printf("              .===================== Enter =====================.\n");
     printf("\n");
     getchar();
     menu_conta(); 
