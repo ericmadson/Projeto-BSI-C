@@ -2,6 +2,8 @@
     "files.associations": {
         "stdlib.h": "c",
         "criar_conta.h": "c",
-        "validacao_cpf.h": "c"
+        "validacao_cpf.h": "c",
+        "deletar_conta.h": "c",
+        "stdio.h": "c"
     }
 }

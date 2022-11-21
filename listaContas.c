@@ -18,6 +18,7 @@ int listaContas(void) {
   printf("|                                                                             |\n");
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+  printf("|                                                                             |\n");
   printf(".=============================================================================.\n");
   scanf("%c", &out);
   return 0;

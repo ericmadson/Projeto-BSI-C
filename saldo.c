@@ -12,7 +12,7 @@ void tela_saldo(void) {
     printf("|            = = = = = = = = = = =  Saldo  = = = = = = = = =                  |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
     printf("|                                                                             |\n");
-    printf("|                    O saldo da sua conta é R$xxxxxxx  !                      |\n");
+    printf("|                    O saldo da sua conta e R$xxxxxxx  !                      |\n");
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 

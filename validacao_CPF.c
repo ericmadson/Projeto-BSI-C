@@ -13,9 +13,9 @@ int CPFvalidation(char *cpf){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite um CPF válido:\n                            |\n");
+    printf("|                          Digite um CPF valido:\n                            |\n");
     printf("|                                                                             |\n");
     printf("|                         Pressione 0 para cancelar                           |\n");
     return 0;
@@ -26,9 +26,9 @@ int CPFvalidation(char *cpf){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite um CPF válido:\n                            |\n");
+    printf("|                          Digite um CPF valido:\n                            |\n");
     printf("|                                                                             |\n");
     printf("|                         Pressione 0 para cancelar                           |\n");
     return 0;
@@ -47,9 +47,9 @@ int CPFvalidation(char *cpf){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite um CPF válido:\n                            |\n");
+    printf("|                          Digite um CPF valido:\n                            |\n");
     printf("|                                                                             |\n");
     printf("|                         Pressione 0 para cancelar                           |\n");
     return 0;
@@ -69,9 +69,9 @@ int CPFvalidation(char *cpf){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = CPF inválido = = = = =                         |\n");
+    printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite um CPF válido:\n                            |\n");
+    printf("|                          Digite um CPF valido:\n                            |\n");
     printf("|                                                                             |\n");
     printf("|                         Pressione 0 para cancelar                           |\n");
     return 0;

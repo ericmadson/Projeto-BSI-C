@@ -37,7 +37,7 @@ char tela_transacoes (void) {
     printf("|                                                                             |\n");
     printf("|            ===================================================              |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
-    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancarias = = = = =         |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
     printf("|            ===================================================              |\n");
     printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
@@ -45,14 +45,14 @@ char tela_transacoes (void) {
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
-    printf("|            = = = = = = = Menu Transações = = = = = = = = =                  |\n");
+    printf("|            = = = = = = = Menu Transacoes = = = = = = = = =                  |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
     printf("|                                                                             |\n");
     printf("|            1. Ver saldo da conta                                            |\n");
-    printf("|            2. Realizar transação                                            |\n");
+    printf("|            2. Realizar transacao                                            |\n");
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
-    printf("|            Escolha a opção desejada:                                        |\n");
+    printf("|            Escolha a opcao desejada:                                        |\n");
     scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
@@ -95,9 +95,9 @@ void tela_FazerTransacoes(void) {
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|            = = = = = transaçao concluida com sucesso ! = = = = =            |\n");
+    printf("|            = = = = = transacao concluida com sucesso ! = = = = =            |\n");
     printf("|                                                                             |\n");
-    printf("|                  [Obrigado por confiar em nossos serviços]\n                |\n");
+    printf("|                  [Obrigado por confiar em nossos servicos]\n                |\n");
     printf("|                                                                             |\n");
     getchar();
     printf(".=============================================================================.\n");

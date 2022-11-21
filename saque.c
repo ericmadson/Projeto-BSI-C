@@ -37,7 +37,7 @@ char tela_saque (void) {
     printf("|                                                                             |\n");
     printf("|            ===================================================              |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
-    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancarias = = = = =         |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
     printf("|            ===================================================              |\n");
     printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
@@ -52,7 +52,7 @@ char tela_saque (void) {
     printf("|            2. Sacar                                                         |\n");
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
-    printf("|            Escolha a opção desejada:                                        |\n");
+    printf("|            Escolha a opcao desejada:                                        |\n");
     scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
@@ -83,7 +83,7 @@ void tela_FazerSaque(void) {
     printf("|                                                                             |\n");
     printf("|              = = = = = saque realizado com sucesso ! = = = = =              |\n");
     printf("|                                                                             |\n");
-    printf("|                  [Obrigado por confiar em nossos serviços]\n                |\n");
+    printf("|                  [Obrigado por confiar em nossos servicos]\n                |\n");
     printf("|                                                                             |\n");
     getchar();
     printf(".=============================================================================.\n");

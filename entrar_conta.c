@@ -18,7 +18,7 @@ int entrar_conta(void) {
     printf("|                                                                             |\n");
     printf("|                    = = = = = Entrando na conta = = = = =                    |\n");
     printf("|                                                                             |\n");
-    printf("|                              Digite seu CPF:  ");
+    printf("|                              Digite seu CPF: ");
     scanf("%s", cpf);
     getchar();
     printf(".=============================================================================.\n");
@@ -493,7 +493,7 @@ void entrar_nao(void) {
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|            = = = = = Não foi possivel entrar na conta ! = = = = =           |\n");
+    printf("|            = = = = = Nao foi possivel entrar na conta ! = = = = =           |\n");
     printf("|                                                                             |\n");
     printf("|                 [CPF ou senha invalidos, tente novamente]\n                 |\n");
     scanf("%c", &op);

@@ -39,7 +39,7 @@ char tela_deposito (void) {
     printf("|                                                                             |\n");
     printf("|            ===================================================              |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
-    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancarias = = = = =         |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = = = =              |\n");
     printf("|            ===================================================              |\n");
     printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
@@ -47,14 +47,14 @@ char tela_deposito (void) {
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
-    printf("|            = = = = = = = =  Menu Depósito  = = = = = = = =                  |\n");
+    printf("|            = = = = = = = =  Menu Deposito  = = = = = = = =                  |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
     printf("|                                                                             |\n");
     printf("|            1. Ver saldo da conta                                            |\n");
     printf("|            2. Depositar                                                     |\n");
     printf("|            0. Voltar ao menu anterior                                       |\n");
     printf("|                                                                             |\n");
-    printf("|            Escolha a opção desejada:  ");
+    printf("|            Escolha a opcao desejada:  ");
     scanf("%c", &op);
     getchar();
     printf("|                                                                             |\n");
@@ -70,7 +70,7 @@ void tela_FazerDeposito(void) {
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
-    printf("|            = = = = = = = =  Menu Depósito  = = = = = = = =                  |\n");
+    printf("|            = = = = = = = =  Menu Deposito  = = = = = = = =                  |\n");
     printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
     printf("|                                                                             |\n");
     printf("|                    Digite o valor que deseja depositar:                     |\n");
@@ -86,7 +86,7 @@ void tela_FazerDeposito(void) {
     printf("|               = = = deposito realizado com sucesso !!!  = = =               |\n");
     printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
     printf("|                                                                             |\n");
-    printf("|                  [Obrigado por confiar em nossos serviços]                  |\n");
+    printf("|                  [Obrigado por confiar em nossos servicos]                  |\n");
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 

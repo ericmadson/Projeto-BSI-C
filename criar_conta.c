@@ -33,7 +33,7 @@ Salva* SalvaConta(void){
     system("clear||cls");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite seu nome completo:\n                        |\n");
     scanf(" %80[^\n]", conta->nome);
@@ -43,9 +43,10 @@ Salva* SalvaConta(void){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                          Digite seu CPF:\n                                  |\n");
+
    do
    {
     scanf(" %11[^\n]", conta->CPF);
@@ -61,9 +62,9 @@ Salva* SalvaConta(void){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|                       Digite sua senha: (apenas números)\n                  |\n");
+    printf("|                       Digite sua senha de 6 numeros:                        |\n");
    do
    {
     printf("Digite uma senha valida: ");
@@ -78,9 +79,10 @@ Salva* SalvaConta(void){
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|                     Dados utilizados em conta já existente!\n               |\n");
+    printf("|                     Dados utilizados em conta ja existente!\n               |\n");
+    printf("|=============================================================================|\n");
     getchar();
     return 0;
     };
@@ -88,32 +90,34 @@ Salva* SalvaConta(void){
     conta->status = '1';
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+    printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|       %s\n", conta-> nome);  
     printf("|       %s\n", conta -> CPF);                                                                          
     printf("|       %s\n", conta -> password);                                                 
-    printf("|                   As informações acima estão corretas ? (S/N)               |\n"); 
+    printf("|                   As informacoes acima estao corretas ? (S/N)               |\n"); 
     scanf(" %c", &resp);
     getchar();
     printf(".=============================================================================.\n");
     if (resp == 's' || resp == 'S') {
       printf("|=============================================================================|\n");
       printf("|                                                                             |\n");
-      printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+      printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
       printf("|                                                                             |\n");
       printf("|                        Conta criada com sucesso !!!                         |\n");
-      scanf("%c", &out);
+      printf("|                                                                             |\n");
       printf(".=============================================================================.\n");
+      scanf("%c", &out);
       return conta;
     }else {
       printf("|=============================================================================|\n");
       printf("|                                                                             |\n");
-      printf("|                    = = = = = Criação de conta = = = = =                     |\n");
+      printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
       printf("|                                                                             |\n");
-      printf("|                  Criação de conta cancelada com sucesso !!!:\n              |\n");
-      scanf("%c", &out);
+      printf("|                  Criacao de conta cancelada com sucesso !!!:\n              |\n");
+      printf("|                                                                             |\n");
       printf(".=============================================================================.\n");
+      scanf("%c", &out);
       return 0;
   }
     return 0;
@@ -125,7 +129,7 @@ void gravacao(Salva* conta) {
   if (fp == NULL) {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Criação revogada = = = = =                      |\n");
+  printf("|                   = = = = = Criacao revogada = = = = =                      |\n");
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
   printf(".=============================================================================.\n");

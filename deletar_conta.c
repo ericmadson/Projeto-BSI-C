@@ -8,7 +8,7 @@
 void exibeConta(Salva* conta) {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                 = = = = = Informações da conta = = = = =                    |\n");
+  printf("|                 = = = = = Informacoes da conta = = = = =                    |\n");
   printf("|                                                                             |\n");
   printf("|   Nome: %s\n", conta->nome);
   printf("|   CPF: %s\n", conta->CPF);
@@ -28,7 +28,7 @@ void excluirConta(void) {
   if (fp == NULL) {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
+  printf("|                   = = = = = Exclusao revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
   printf(".=============================================================================.\n");
@@ -37,17 +37,17 @@ void excluirConta(void) {
   printf("\n\n");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Exclusão de conta = = = = =                     |\n");
+  printf("|                   = = = = = Exclusao de conta = = = = =                     |\n");
   printf("|                                                                             |\n");
-  printf("|                 Digite o CPF da conta que será deletada:                    |\n");
+  printf("|                 Digite o CPF da conta que sera deletada:                    |\n");
   scanf(" %14[^\n]", procurado);
   printf(".=============================================================================.\n");
   printf("\n\n");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Exclusão de conta = = = = =                    |\n");
+  printf("|                    = = = = = Exclusao de conta = = = = =                    |\n");
   printf("|                                                                             |\n");
-  printf("|                 Digite a senha da conta que será deletada:\n                |\n");
+  printf("|                 Digite a senha da conta que sera deletada:\n                |\n");
   scanf(" %14[^\n]", senha);
   printf(".=============================================================================.\n");
   conta = (Salva*) malloc(sizeof(Salva));
@@ -62,7 +62,7 @@ void excluirConta(void) {
     getchar();
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Exclusão de conta = = = = =                    |\n");
+  printf("|                    = = = = = Exclusao de conta = = = = =                    |\n");
   printf("|                                                                             |\n");
   printf("|                 Deseja realmente deletar essa conta ? (S/N):\n              |\n");
   scanf("%c", &resp);
@@ -73,7 +73,7 @@ void excluirConta(void) {
       fwrite(conta, sizeof(Salva), 1, fp);
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Exclusão de conta = = = = =                    |\n");
+  printf("|                    = = = = = Exclusao de conta = = = = =                    |\n");
   printf("|                                                                             |\n");
   printf("|                        Conta Excluida com sucesso !!!:\n                    |\n");
   scanf("%c", &out);
@@ -82,7 +82,7 @@ void excluirConta(void) {
      } else {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
+  printf("|                   = = = = = Exclusao revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
   printf("|                    Seus dados permanecem inalterados !!!:\n                 |\n");
   scanf("%c", &out);
@@ -92,9 +92,9 @@ void excluirConta(void) {
   } else {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Exclusão revogada = = = = =                     |\n");
+  printf("|                   = = = = = Exclusao revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
-  printf("|                         Conta não encontrada !!!:\n                         |\n");
+  printf("|                         Conta nao encontrada !!!:\n                         |\n");
   scanf("%c", &out);
   printf(".=============================================================================.\n");
   getchar();
