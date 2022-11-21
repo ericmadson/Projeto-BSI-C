@@ -17,7 +17,7 @@ void exibeConta(Salva*);
 // deletar conta
 int listaContas(void);
 void tela_nao(void);
-void excluirConta(void);
+/*int excluirConta(void);*/
 int buscarConta(char CPF[12], char senha[7]);
 void deletar_conta(void);
 void deletar_nao(void);

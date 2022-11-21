@@ -1,1 +1,1 @@
-void excluirConta (void);
+int excluirConta (void);

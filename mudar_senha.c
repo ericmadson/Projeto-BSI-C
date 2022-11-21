@@ -6,7 +6,7 @@
 #include "criar_conta.h"
 #include "validacao_senha.h"
 
-void mudar_senha(void) {
+int mudar_senha(void) {
   FILE* fp;
   Salva* contas;
   int achou;
@@ -27,7 +27,7 @@ void mudar_senha(void) {
     printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
     printf(".=============================================================================.\n");
     scanf("%c", &out);
-    exit(1);
+    return 0;
   }
     system("clear||cls");   
     printf("\n");
@@ -88,7 +88,7 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
    while (!(validarSenha = validacao_senha(contas->password)));
     validarDados = buscarConta(contas->CPF, contas->password);
 
-    if (validarDados == 1) {
+    if (validarDados == 0) {
     contas->status = '1';
     fseek(fp, (-1)*sizeof(Salva), SEEK_CUR);
     fwrite(contas, sizeof(Salva), 1, fp);
@@ -134,6 +134,7 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
   free(contas);
   fclose(fp);
   }
+  return 0;
 }
 
 

@@ -16,7 +16,7 @@ void exibeConta(Salva* conta) {
   printf(".=============================================================================.\n");
 }
 
-void excluirConta(void) {
+int excluirConta(void) {
   FILE* fp;
   Salva* conta;
   int achou;
@@ -32,7 +32,8 @@ void excluirConta(void) {
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
   printf(".=============================================================================.\n");
-  exit(1);
+  scanf("%c", &out);
+  return 0;
   }
   printf("\n\n");
   printf("|=============================================================================|\n");
@@ -101,4 +102,5 @@ void excluirConta(void) {
   }
   free(conta);
   fclose(fp);
+  return 0;
 }
