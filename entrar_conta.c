@@ -16,7 +16,6 @@ int entrar_conta(void) {
 
   fp = fopen("contas.dat", "r+b");
   if (fp == NULL) {
-    system("clear||cls");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|                   = = = = = Entrada revogada = = = = =                      |\n");

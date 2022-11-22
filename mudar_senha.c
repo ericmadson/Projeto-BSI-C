@@ -18,7 +18,6 @@ int mudar_senha(void) {
   char procurado[15];
   fp = fopen("contas.dat", "r+b");
   if (fp == NULL) {
-    system("clear||cls");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
     printf("|                   = = = = = Alteracao revogada = = = = =                    |\n");

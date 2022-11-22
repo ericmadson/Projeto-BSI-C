@@ -11,7 +11,6 @@ int listaContas(void) {
   char out;
   fp = fopen("contas.dat", "rb");
   if (fp == NULL) {
-  system("clear||cls");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
   printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
