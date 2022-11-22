@@ -47,7 +47,7 @@ int CPFvalidation(char *cpf){
     printf("|                                                                             |\n");
     printf("|                  Digite um CPF valido (0 pra cancelar): \n                  |\n");
     return 0;
-  }
+    }
     else 
     {
       for(i = 0, j = 11; i < strlen(cpf)-1; i++, j--)
@@ -67,8 +67,8 @@ int CPFvalidation(char *cpf){
     printf("|                                                                             |\n");
     printf("|                  Digite um CPF valido (0 pra cancelar): \n                  |\n");
     return 0;
-  }
     }
-    }
+     }
+      }
     return 1;
-    }
+       }

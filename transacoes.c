@@ -95,9 +95,11 @@ void tela_FazerTransacoes(void) {
     printf("\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|            = = = = = transacao concluida com sucesso ! = = = = =            |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
+    printf("|               = = = trancasao realizado com sucesso !!! = = =               |\n");
+    printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
     printf("|                                                                             |\n");
-    printf("|                  [Obrigado por confiar em nossos servicos]\n                |\n");
+    printf("|             Porem, essa funcao so sera implementada futuramente             |\n");
     printf("|                                                                             |\n");
     getchar();
     printf(".=============================================================================.\n");
