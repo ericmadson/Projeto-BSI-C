@@ -8,10 +8,26 @@
 void auxTem(void);
 void auxTem2(void);
 int entrar_conta(void) {
+    FILE* fp;
     char cpf[12];
     char senha[7];
+    char out;
     int validarDados;
-    
+
+  fp = fopen("contas.dat", "r+b");
+  if (fp == NULL) {
+    system("clear||cls");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                   = = = = = Entrada revogada = = = = =                      |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
+    scanf("%c", &out);
+    return 0;
+  }
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");

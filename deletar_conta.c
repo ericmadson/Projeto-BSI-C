@@ -31,6 +31,7 @@ int excluirConta(void) {
   printf("|                   = = = = = Exclusao revogada = = = = =                     |\n");
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
+  printf("|                                                                             |\n");
   printf(".=============================================================================.\n");
   scanf("%c", &out);
   return 0;

@@ -21,10 +21,11 @@ int mudar_senha(void) {
     system("clear||cls");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
+    printf("|                   = = = = = Alteracao revogada = = = = =                    |\n");
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+    printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     scanf("%c", &out);
     return 0;
