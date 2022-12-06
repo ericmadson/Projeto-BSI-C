@@ -4,6 +4,56 @@
 #include <unistd.h>
 #include "criar_conta.h"
 #include "deletar_conta.h"
+#include "siglas.h"
+
+int listaContasMenu(void) {
+    int opcao;
+
+    do {
+        opcao = tela_listagem();
+        switch(opcao) {
+            case 1:  
+                listaContas();
+                break;
+
+            case 2:
+                listarPorEstado();
+                break;
+          
+        } 	
+    } while (opcao != 0);
+
+    return 0;
+}
+
+char tela_listagem(void) {
+    int op;
+    system("clear||cls");
+    printf("\n");
+    printf(".=============================================================================.\n");
+    printf("|                                                                             |\n");
+    printf("|             Universidade Federal do Rio Grande do Norte                     |\n");
+    printf("|                   Centro de Ensino Superior do Serido                       |\n");
+    printf("|                 Departamento de Computacao e Tecnologia                     |\n");
+    printf("|                    Disciplina DCT1106 -- Programacao                        |\n");
+    printf("|                 Sistema de Controle de Contas Bancarias                     |\n");
+    printf("|        Developed by @igwbriel and @ericmadsonn -- since august, 2022        |\n");
+    printf("|                                                                             |\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                   = = = = = Opcoes de listagem = = = = =                    |\n");
+    printf("|                                                                             |\n");
+    printf("|              1. Listagem por ordem de cadastro                              |\n");
+    printf("|              2. Listagem por estado                                         |\n");
+    //printf("|              2. Listagem por ordem alfabetica                               |\n");
+    printf("|              0. Sair                                                        |\n");
+    printf("|                                                                             |\n");
+    printf(".=============================================================================.\n");
+    printf("               Escolha uma opcao acima: ");
+    scanf("%d", &op);
+    getchar();
+    return op;
+}
 
 int listaContas(void) {
   FILE* fp;

@@ -34,7 +34,7 @@ int main(void) {
                 break;
         
             case 5:   
-                listaContas();
+                listaContasMenu();
                 break;
             
             case 6:   
@@ -43,6 +43,8 @@ int main(void) {
 
             case 7: 
                 tela_equipe();
+                break;
+            case 8:
                 break;
         } 	
     } while (opcao != 0);

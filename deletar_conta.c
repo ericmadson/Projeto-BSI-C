@@ -11,6 +11,7 @@ void exibeConta(Salva* conta) {
   printf("|                 = = = = = Informacoes da conta = = = = =                    |\n");
   printf("|                                                                             |\n");
   printf("|   Nome: %s\n", conta->nome);
+  printf("|   Estado: %s\n", conta->estado);
   printf("|   CPF: %s\n", conta->CPF);
   printf("|   Senha: %s\n", conta->password);
   printf(".=============================================================================.\n");

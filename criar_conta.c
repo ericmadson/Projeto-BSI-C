@@ -6,6 +6,7 @@
 #include "validacao_senha.h"
 #include "validacao_CPF.h"
 #include "criar_conta.h"
+#include "siglas.h"
 
 int tela_cadastro(void) {
     Salva* fulano;
@@ -92,7 +93,8 @@ Salva* SalvaConta(void){
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|       %s\n", conta-> nome);  
+    printf("|       %s\n", conta-> nome);
+    printf("|       %s\n", conta-> estado);    
     printf("|       %s\n", conta -> CPF);                                                                          
     printf("|       %s\n", conta -> password);                                                 
     printf("|                   As informacoes acima estao corretas ? (S/N)               |\n"); 
