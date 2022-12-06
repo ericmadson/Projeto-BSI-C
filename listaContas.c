@@ -55,6 +55,68 @@ char tela_listagem(void) {
     return op;
 }
 
+int listarPorEstado(void) {
+  FILE* fp;
+  Salva* conta;
+  char out;
+  char estadoSigla[3];
+  fp = fopen("contas.dat", "rb");
+  if (fp == NULL) {
+  system("clear||cls");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
+  printf("|                                                                             |\n");
+  printf("|                                                                             |\n");
+  printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+  printf("|                                                                             |\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  return 0;
+  }
+  do {
+  printf("\n");
+  system("clear||cls");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                    = = = = = Listagem por estado = = = = =                  |\n");
+  printf("|                                                                             |\n");
+  printf("|                                                                             |\n");
+  printf("|                    Digite a sigla do estado para filtragem :\n              |\n");
+  scanf(" %s", estadoSigla);
+  getchar();
+  printf(".=============================================================================.\n");
+  } while (siglasCmp(estadoSigla) == 0);
+  system("clear||cls");
+  printf("\n\n");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Lista de Contas = = = = =                       |\n");
+  printf("|                                                                             |\n");
+  printf("|                                                                             |\n");
+  conta = (Salva*) malloc(sizeof(Salva));
+  while(fread(conta, sizeof(Salva), 1, fp) == 1) {
+      if(strcmp(conta->estado, estadoSigla) == 0) {
+      exibeConta(conta);
+      scanf("%c", &out);
+    }
+    }
+  if (fread(conta, sizeof(Salva), 1, fp) == 0) {
+  system("clear||cls");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Fim da listagem = = = = =                       |\n");
+  printf("|                                                                             |\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  return 0;
+  }
+  fclose(fp);
+  free(conta);
+  return 0;
+}
+
+
 int listaContas(void) {
   FILE* fp;
   Salva* conta;

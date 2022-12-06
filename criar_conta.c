@@ -27,6 +27,7 @@ Salva* SalvaConta(void){
     Salva* conta;
     char out;
     char resp;
+    char estadoSigla[3];
     int validarSenha;
     int validarDados;
     int cpfvalidation;
@@ -39,6 +40,19 @@ Salva* SalvaConta(void){
     printf("|                          Digite seu nome completo:\n                        |\n");
     scanf(" %80[^\n]", conta->nome);
     printf(".=============================================================================.\n");
+    do {
+    printf("\n");
+    system("clear||cls");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                      Digite seu estado (apenas a sigla):\n                  |\n");
+    scanf(" %s", estadoSigla);
+    printf(".=============================================================================.\n");
+    } while (siglasCmp(estadoSigla) == 0);
+    strcpy(conta->estado, estadoSigla);
     printf("\n");
     system("clear||cls");   
     printf("\n");
@@ -69,7 +83,7 @@ Salva* SalvaConta(void){
    do
    {
     printf("Digite uma senha valida: ");
-    scanf(" %7[^\n]", conta->password);
+    scanf(" %20[^\n]", conta->password);
     getchar();
    } 
    while (!(validarSenha = validacao_senha(conta->password)));
@@ -124,6 +138,7 @@ Salva* SalvaConta(void){
   }
     return 0;
 }
+
 
 void gravacao(Salva* conta) {
   FILE* fp;
