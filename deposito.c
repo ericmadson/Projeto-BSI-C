@@ -86,7 +86,7 @@ void tela_FazerDeposito(void) {
     printf("|               = = = deposito realizado com sucesso !!!  = = =               |\n");
     printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
     printf("|                                                                             |\n");
-    printf("|                  [Obrigado por confiar em nossos servicos]                  |\n");
+    printf("|             Porem, essa funcao so sera implementada futuramente             |\n");
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 

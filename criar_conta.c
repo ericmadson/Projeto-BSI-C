@@ -69,7 +69,7 @@ Salva* SalvaConta(void){
    do
    {
     printf("Digite uma senha valida: ");
-    scanf(" %20[^\n]", conta->password);
+    scanf(" %7[^\n]", conta->password);
     getchar();
    } 
    while (!(validarSenha = validacao_senha(conta->password)));

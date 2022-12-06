@@ -18,13 +18,13 @@ int mudar_senha(void) {
   char procurado[15];
   fp = fopen("contas.dat", "r+b");
   if (fp == NULL) {
-    system("clear||cls");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
+    printf("|                   = = = = = Alteracao revogada = = = = =                    |\n");
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+    printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     scanf("%c", &out);
     return 0;
@@ -46,7 +46,7 @@ int mudar_senha(void) {
     printf("|                                                                             |\n");
     printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
     printf("|                                                                             |\n");
-    printf("|                  Digite a senha da conta a ser alterada: ");
+    printf("|                  Digite a senha atual: ");
     scanf(" %14[^\n]", procurado);
     getchar();
     printf(".=============================================================================.\n");
@@ -76,13 +76,10 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
     printf("|                                                                             |\n");
     printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
     printf("|                                                                             |\n");
-    printf("|                  Digite a nova senha da sua conta: ");
-    scanf(" %14[^\n]", contas->password);
-    getchar();
        do
    {
-    printf("Digite uma senha valida: ");
-    scanf(" %20[^\n]", contas->password);
+    printf("|                   Digite a nova senha da sua conta: ");
+    scanf(" %s", contas->password);
     getchar();
    } 
    while (!(validarSenha = validacao_senha(contas->password)));
@@ -114,8 +111,8 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
      printf("|                                                                             |\n");
      printf(".=============================================================================.\n");
      scanf("%c", &out);
-     getchar();
     }
+  }
   }
    else 
    {
@@ -127,13 +124,13 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
     printf("|                                                                             |\n");
     printf("|     CPF: %s\n", cpf);
     printf("|     Senha: %s\n", procurado);
-    printf("|                   Nao foram encontrados no nosso arquivo !                  |\n");
+    printf("|     Alguma das informacoes nao foram encontrados no nosso arquivo !         |\n");
     printf(".=============================================================================.\n");
-    getchar();
+    scanf("%c", &out);
    }
   free(contas);
   fclose(fp);
-  }
+  
   return 0;
 }
 
