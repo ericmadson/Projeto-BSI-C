@@ -6,6 +6,21 @@
 #include "deletar_conta.h"
 #include "siglas.h"
 
+typedef struct noPet NoName;
+
+struct noPet {
+  int cod;
+  char nome[15];
+  char raca[15];
+  char nasc[11];
+  char sexo;
+  char status;
+  NoName* prox;
+};
+
+
+NoName* listaAlfabetica(void);
+void exibeLista(NoName*);
 int listaContasMenu(void) {
     int opcao;
 
@@ -18,6 +33,11 @@ int listaContasMenu(void) {
 
             case 2:
                 listarPorEstado();
+                break;
+
+            case 3:
+                listaAlfabetica();
+                exibeLista();
                 break;
           
         } 	
@@ -45,7 +65,8 @@ char tela_listagem(void) {
     printf("|                                                                             |\n");
     printf("|              1. Listagem por ordem de cadastro                              |\n");
     printf("|              2. Listagem por estado                                         |\n");
-    //printf("|              2. Listagem por ordem alfabetica                               |\n");
+    printf("|              3. Listagem por ordem alfabetica                               |\n");
+    printf("|                                                                             |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
@@ -161,4 +182,49 @@ int listaContas(void) {
   fclose(fp);
   free(conta);
   return 0;
+}
+
+
+ NoName* listaAlfabetica(void) {
+  FILE* fp;
+  Salva* conta;
+  NoName* noname;
+  NoName* lista;
+
+  lista = NULL;
+  fp = fopen("contas.dat", "rb");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+
+  conta = (Salva*) malloc(sizeof(Salva));
+  while(fread(conta, sizeof(Salva), 1, fp)) {
+    if (conta->status == '1') {
+      noname = (NoName*) malloc(sizeof(NoName));
+      strcpy(noname->nome, conta->nome);
+      noname->status = conta->status;
+
+      if (lista == NULL) {
+        lista = noname;
+        noname->prox = NULL;
+      } else if (strcmp(noname->nome,lista->nome) < 0) {
+        noname->prox = lista;
+        lista = noname;
+      } else {
+        NoName* anter = lista;
+        NoName* atual = lista->prox;
+        while ((atual != NULL) && strcmp(atual->nome,noname->nome) < 0) {
+          anter = atual;
+          atual = atual->prox;
+        }
+        anter->prox = noname;
+        noname->prox = atual;
+      }
+    }
+  }
+  fclose(fp);
+  free(conta);
+  return lista;
 }

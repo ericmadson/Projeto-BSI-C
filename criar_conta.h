@@ -18,6 +18,7 @@ void exibeConta(Salva*);
 // deletar conta
 int listaContas(void);
 int listaContasMenu(void);
+
 char tela_listagem(void);
 int listarPorEstado(void);
 void tela_nao(void);
