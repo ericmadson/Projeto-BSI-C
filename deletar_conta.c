@@ -37,6 +37,7 @@ int excluirConta(void) {
   scanf("%c", &out);
   return 0;
   }
+  system("clear||cls");
   printf("\n\n");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
@@ -45,6 +46,7 @@ int excluirConta(void) {
   printf("|                 Digite o CPF da conta que sera deletada:                    |\n");
   scanf(" %14[^\n]", procurado);
   printf(".=============================================================================.\n");
+  system("clear||cls");
   printf("\n\n");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");

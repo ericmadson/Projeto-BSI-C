@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 #include "criar_conta.h"
 #include "deletar_conta.h"
 #include "siglas.h"
@@ -9,11 +8,10 @@
 typedef struct noPet NoName;
 
 struct noPet {
-  int cod;
-  char nome[15];
-  char raca[15];
-  char nasc[11];
-  char sexo;
+  char nome[80];
+  char CPF[12];
+  char password[7];
+  char estado[3];
   char status;
   NoName* prox;
 };
@@ -23,7 +21,7 @@ NoName* listaAlfabetica(void);
 void exibeLista(NoName*);
 int listaContasMenu(void) {
     int opcao;
-
+    NoName* lista;
     do {
         opcao = tela_listagem();
         switch(opcao) {
@@ -36,8 +34,8 @@ int listaContasMenu(void) {
                 break;
 
             case 3:
-                listaAlfabetica();
-                exibeLista();
+                lista = listaAlfabetica();
+                exibeLista(lista);
                 break;
           
         } 	
@@ -185,18 +183,26 @@ int listaContas(void) {
 }
 
 
- NoName* listaAlfabetica(void) {
+  NoName* listaAlfabetica(void) {
   FILE* fp;
   Salva* conta;
   NoName* noname;
   NoName* lista;
+  char out; 
 
   lista = NULL;
   fp = fopen("contas.dat", "rb");
   if (fp == NULL) {
-    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
-    printf("Não é possível continuar o programa...\n");
-    exit(1);
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
+  printf("|                                                                             |\n");
+  printf("|                                                                             |\n");
+  printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+  printf("|                                                                             |\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  return 0;
   }
 
   conta = (Salva*) malloc(sizeof(Salva));
@@ -205,7 +211,10 @@ int listaContas(void) {
       noname = (NoName*) malloc(sizeof(NoName));
       strcpy(noname->nome, conta->nome);
       noname->status = conta->status;
-
+      strcpy(noname->estado, conta->estado);
+      strcpy(noname->CPF, conta->CPF);
+      strcpy(noname->password, conta->password);
+      noname->prox = NULL;
       if (lista == NULL) {
         lista = noname;
         noname->prox = NULL;
@@ -227,4 +236,23 @@ int listaContas(void) {
   fclose(fp);
   free(conta);
   return lista;
+}
+
+void exibeLista(NoName* lista) {
+  char out;
+  while (lista != NULL) {
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                 = = = = = Informacoes da conta = = = = =                    |\n");
+  printf("|                                                                             |\n");
+  printf("|   Nome: %s\n", lista->nome);
+  printf("|   Estado: %s\n", lista->estado);
+  printf("|   CPF: %s\n", lista->CPF);
+  printf("|   Senha: %s\n", lista->password);
+  printf("|   Status: %c\n", lista->status);
+  printf("\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  lista = lista->prox;
+  }
 }

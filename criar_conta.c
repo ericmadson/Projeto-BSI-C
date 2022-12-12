@@ -107,10 +107,10 @@ Salva* SalvaConta(void){
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|       %s\n", conta-> nome);
-    printf("|       %s\n", conta-> estado);    
-    printf("|       %s\n", conta -> CPF);                                                                          
-    printf("|       %s\n", conta -> password);                                                 
+    printf("|   Nome: %s\n", conta->nome);
+    printf("|   Estado: %s\n", conta->estado);
+    printf("|   CPF: %s\n", conta->CPF);
+    printf("|   Senha: %s\n", conta->password);                                 
     printf("|                   As informacoes acima estao corretas ? (S/N)               |\n"); 
     scanf(" %c", &resp);
     getchar();

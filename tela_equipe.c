@@ -31,6 +31,11 @@ void tela_equipe(void) {
     printf("|              Redes sociais: @ericmadsonn                                    |\n");
     printf("|              Git: https://github.com/ericmadson                             |\n");
     printf("|_____________________________________________________________________________|\n");
+    printf("|                                                                             |\n");
+    printf("|              Code adaptation of:                                            |\n");
+    printf("|              Flavius Gorgonio                                               |\n");
+    printf("|              Git: https://github.com/FlaviusGorgonio                        |\n");
+    printf("|                                                                             |\n");
     printf("|              With contributions by:                                         |\n");
     printf("|                                                                             |\n");    
     printf("|              Isa Kaillany                                                   |\n");
@@ -41,7 +46,9 @@ void tela_equipe(void) {
     printf("|                                                                             |\n");
     printf("|              Breno Porfirio                                                 |\n");
     printf("|              Git: https://github.com/BrenoPorfirio                          |\n");
+    printf("|                                                                             |\n");
     printf("|                                                                             |\n"); 
+    printf("|                                                                             |\n");
     printf(".=============================================================================.\n");
     getchar();                                                                          
 }  
