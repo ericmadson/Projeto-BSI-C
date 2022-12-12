@@ -5,9 +5,9 @@
 #include "deletar_conta.h"
 #include "siglas.h"
 
-typedef struct noPet NoName;
+typedef struct Listagem NoName;
 
-struct noPet {
+struct Listagem {
   char nome[80];
   char CPF[12];
   char password[7];
