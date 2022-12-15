@@ -6,8 +6,8 @@ typedef struct cadastro_conta Salva;
 struct cadastro_conta {
     char nome[80];
     char CPF[12];
-    char password[7];
-    char estado[3];
+    char password[8];
+    char estado[4];
     char status;
 };
 // gravação de conta
