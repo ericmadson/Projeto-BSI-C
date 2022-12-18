@@ -19,6 +19,7 @@ struct Listagem {
 
 NoName* listaAlfabetica(void);
 void exibeLista(NoName*);
+int listaContasExcluidas(void);
 int listaContasMenu(void) {
     int opcao;
     NoName* lista;
@@ -36,6 +37,9 @@ int listaContasMenu(void) {
             case 3:
                 lista = listaAlfabetica();
                 exibeLista(lista);
+                break;
+            case 4:
+                listaContasExcluidas();
                 break;
           
         } 	
@@ -64,6 +68,7 @@ char tela_listagem(void) {
     printf("|              1. Listagem por ordem de cadastro                              |\n");
     printf("|              2. Listagem por estado                                         |\n");
     printf("|              3. Listagem por ordem alfabetica                               |\n");
+    printf("|              4. Listagem por contas excluidas                               |\n");
     printf("|                                                                             |\n");
     printf("|              0. Sair                                                        |\n");
     printf("|                                                                             |\n");
@@ -121,7 +126,6 @@ int listarPorEstado(void) {
     }
     }
   if (fread(conta, sizeof(Salva), 1, fp) == 0) {
-  system("clear||cls");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
   printf("|                   = = = = = Fim da listagem = = = = =                       |\n");
@@ -168,7 +172,6 @@ int listaContas(void) {
     }
     }
   if (fread(conta, sizeof(Salva), 1, fp) == 0) {
-  system("clear||cls");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
   printf("|                   = = = = = Fim da listagem = = = = =                       |\n");
@@ -182,6 +185,50 @@ int listaContas(void) {
   return 0;
 }
 
+int listaContasExcluidas(void) {
+  FILE* fp;
+  Salva* conta;
+  char out;
+  fp = fopen("contas.dat", "rb");
+  if (fp == NULL) {
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Listagem revogada = = = = =                     |\n");
+  printf("|                                                                             |\n");
+  printf("|                                                                             |\n");
+  printf("|                   Ocorreu um erro na abertura do arquivo !                  |\n");
+  printf("|                                                                             |\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  return 0;
+  }
+  system("clear||cls");
+  printf("\n\n");
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Lista de Contas = = = = =                       |\n");
+  printf("|                                                                             |\n");
+  printf("|                                                                             |\n");
+  conta = (Salva*) malloc(sizeof(Salva));
+  while(fread(conta, sizeof(Salva), 1, fp) == 1) {
+      if (conta->status == '0') {
+      exibeConta(conta);
+      scanf("%c", &out);
+    }
+    }
+  if (fread(conta, sizeof(Salva), 1, fp) == 0) {
+  printf("|=============================================================================|\n");
+  printf("|                                                                             |\n");
+  printf("|                   = = = = = Fim da listagem = = = = =                       |\n");
+  printf("|                                                                             |\n");
+  printf(".=============================================================================.\n");
+  scanf("%c", &out);
+  return 0;
+  }
+  fclose(fp);
+  free(conta);
+  return 0;
+}
 
   NoName* listaAlfabetica(void) {
   FILE* fp;
@@ -249,7 +296,6 @@ void exibeLista(NoName* lista) {
   printf("|   Estado: %s\n", lista->estado);
   printf("|   CPF: %s\n", lista->CPF);
   printf("|   Senha: %s\n", lista->password);
-  printf("|   Status: %c\n", lista->status);
   printf("\n");
   printf(".=============================================================================.\n");
   scanf("%c", &out);

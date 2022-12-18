@@ -8,6 +8,7 @@ struct cadastro_conta {
     char CPF[12];
     char password[7];
     char estado[3];
+    char saldo[8];
     char status;
 };
 // gravação de conta
