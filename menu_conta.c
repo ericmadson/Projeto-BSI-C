@@ -46,7 +46,7 @@ char tela_menu_conta(void) {
     printf("|                                                                             |\n");
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
-    printf("|         = = = = = Sistema de Controle de Contas Bancárias = = = = =         |\n");
+    printf("|         = = = = = Sistema de Controle de Contas Bancarias = = = = =         |\n");
     printf("|                                                                             |\n");
     printf("|              1. Realizar deposito                                           |\n");
     printf("|              2. Realizar saque                                              |\n");

@@ -30,7 +30,6 @@ Salva* SalvaConta(void){
     char estadoSigla[3];
     int validarSenha;
     int validarDados;
-    int saldo = 0;
     int cpfvalidation;
     conta = (Salva*) malloc(sizeof(Salva));
     system("clear||cls");
@@ -103,6 +102,7 @@ Salva* SalvaConta(void){
     return 0;
     };
     system("clear||cls");
+    conta->saldo = 0;
     conta->status = '1';
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");
@@ -111,7 +111,8 @@ Salva* SalvaConta(void){
     printf("|   Nome: %s\n", conta->nome);
     printf("|   Estado: %s\n", conta->estado);
     printf("|   CPF: %s\n", conta->CPF);
-    printf("|   Senha: %s\n", conta->password);                                 
+    printf("|   Senha: %s\n", conta->password);    
+    printf("|   Saldo: %.2f\n", conta->saldo);                              
     printf("|                   As informacoes acima estao corretas ? (S/N)               |\n"); 
     scanf(" %c", &resp);
     getchar();
@@ -139,7 +140,6 @@ Salva* SalvaConta(void){
   }
     return 0;
 }
-
 
 void gravacao(Salva* conta) {
   FILE* fp;

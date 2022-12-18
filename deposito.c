@@ -5,8 +5,6 @@
 #include "menu_conta.h"
 #include "saldo.h"
 
-void tela_saldo(void);
-
 int menu_deposito(void) {
     char opcao;
 
@@ -19,10 +17,6 @@ int menu_deposito(void) {
 
             case '2':   
                 tela_FazerDeposito();
-                break;
-            
-            case '3':   
-                //mudar_senha();
                 break;
         } 	
     
@@ -91,6 +85,29 @@ void tela_FazerDeposito(void) {
     printf(".=============================================================================.\n");
     printf("\n"); 
 } 
+
+/*void Cash_Deposit()
+{
+   auto int acc_no;
+   float add_money;
+ 
+   printf("Enter account number you want to deposit money:");
+   scanf("%d",&acc_no);
+   printf("\nThe current balance for account %d is %f \n", 
+   acc_no, account[acc_no-1].available_balance);
+   printf("\nEnter money you want to deposit :  ");
+   scanf("%f",&add_money);
+ 
+   while (acc_no=account[acc_no-1].acc_number)
+   {
+         account[acc_no-1].available_balance=
+         account[acc_no-1].available_balance+add_money;
+         printf("\nThe New balance for account %d is %f \n", 
+         acc_no, account[acc_no-1].available_balance);
+         break; 
+   }acc_no++;
+}*/
+
 /*
 //sub-modulo 1 tela final (se não funcionar)
 void tela_depositoNao(void) {

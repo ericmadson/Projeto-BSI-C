@@ -18,10 +18,6 @@ int menu_saque(void) {
             case '2':   
                 tela_FazerSaque();
                 break;
-            
-            case '3':   
-                //mudar_senha();
-                break;
         } 	
     
     } while (opcao != '0');

@@ -8,7 +8,7 @@ struct cadastro_conta {
     char CPF[12];
     char password[7];
     char estado[3];
-    char saldo[8];
+    float saldo;
     char status;
 };
 // gravação de conta
@@ -16,10 +16,9 @@ Salva* SalvaConta(void);
 void gravacao(Salva*);
 void exibeConta(Salva*);
 
-// deletar conta
+//listagens 
 int listaContas(void);
 int listaContasMenu(void);
-
 char tela_listagem(void);
 int listarPorEstado(void);
 void tela_nao(void);
