@@ -51,7 +51,7 @@ char tela_menu_conta(void) {
     printf("|              1. Realizar deposito                                           |\n");
     printf("|              2. Realizar saque                                              |\n");
     printf("|              3. Realizar transacoes                                         |\n");
-    printf("|              0. Sair                                                        |\n");
+    printf("|              0. Sair da conta                                               |\n");
     printf("|                                                                             |\n");
     printf("               Escolha uma opcao acima: ");
     scanf("%c", &op);

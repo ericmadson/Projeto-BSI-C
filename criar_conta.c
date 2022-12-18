@@ -21,8 +21,6 @@ int tela_cadastro(void) {
     return 0;
 }
 
-struct cadastro_conta;
-
 Salva* SalvaConta(void){
     Salva* conta;
     char out;
@@ -102,7 +100,7 @@ Salva* SalvaConta(void){
     return 0;
     };
     system("clear||cls");
-    conta->saldo = 0;
+    conta->saldo = 05;
     conta->status = '1';
     printf("|=============================================================================|\n");
     printf("|                                                                             |\n");

@@ -17,7 +17,7 @@ int buscarConta (char CPF[12], char senha[7] ) {
   conta = (Salva*) malloc(sizeof(Salva));
   achou = 0;
   while((!achou) && (fread(conta, sizeof(Salva), 1, fp))) {
-   if ((strcmp(conta->CPF, procurado) == 0) && (strcmp(conta->password, buscaSenha) == 0) && (conta->status == '1')) {
+   if (((strcmp(conta->CPF, procurado) == 0) || (strcmp(conta->password, buscaSenha) == 0)) && (conta->status == '1')) {
      achou = 1;
      total = achou;
    } else {

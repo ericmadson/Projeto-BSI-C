@@ -4,6 +4,7 @@
         "criar_conta.h": "c",
         "validacao_cpf.h": "c",
         "deletar_conta.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "menu_conta.h": "c"
     }
 }
