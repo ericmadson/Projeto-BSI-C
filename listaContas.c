@@ -11,7 +11,7 @@ struct Listagem {
   char nome[80];
   char CPF[12];
   char password[7];
-  char estado[3];
+  char estado[3];  
   char status;
   NoName* prox;
 };

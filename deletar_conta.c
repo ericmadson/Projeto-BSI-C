@@ -14,6 +14,8 @@ void exibeConta(Salva* conta) {
   printf("|   Estado: %s\n", conta->estado);
   printf("|   CPF: %s\n", conta->CPF);
   printf("|   Senha: %s\n", conta->password);
+  printf("|   Saldo: %.2f\n", conta->saldo);
+  printf("|                                                                             |\n");
   printf(".=============================================================================.\n");
 }
 
