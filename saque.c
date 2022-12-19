@@ -68,25 +68,22 @@ void tela_FazerSaque(void) {
     float op;
   int achou;
   char procurado[15];
-  // TO DO
-  // ALTERAR NOME DA VARIAVEL
-  float fuedase = 0;
+  float valor = 0;
 if (fp == NULL) {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Exclusao revogada = = = = =                     |\n");
+  printf("|                     = = = = = Saque revogado = = = = =                      |\n");
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
   printf("|                                                                             |\n");
   printf(".=============================================================================.\n");
   scanf("%c", &out);
   }
-  // TO DO
-  // ALTERAR TEXTOS
+
   system("clear||cls");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
+  printf("|                     = = = = = Buscando conta = = = = =                      |\n");
   printf("|                                                                             |\n");
   printf("|                  Digite a senha atual: ");
   scanf(" %14[^\n]", procurado);
@@ -99,12 +96,10 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
    if ((strcmp(contas->password, procurado) == 0) && (contas->status == '1')) 
    {
      achou = 1;
-     fuedase = contas->saldo;
+     valor = contas->saldo;
    }
  }
   if (achou) {
-    // TO DO
-    // ALTERAR ELSE
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
@@ -113,13 +108,13 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
     printf("|               = = = = = = = =  Menu Saque = = = = = = = = = =               |\n");
     printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
     printf("|                                                                             |\n");
-    printf("|                      Digite o valor que deseja sacar:                       |\n");
+    printf("|                      Digite o valor que deseja sacar: ");
     scanf("%f", &op);
     getchar();
     printf(".=============================================================================.\n");
     printf("\n"); 
-    fuedase = fuedase - op;
-    contas->saldo = fuedase;
+    valor = valor - op;
+    contas->saldo = valor;
     fseek(fp, (-1)*sizeof(Salva), SEEK_CUR);
     fwrite(contas, sizeof(Salva), 1, fp);
     getchar();
@@ -132,32 +127,13 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
     printf("|               = = = = = = = = = = = = = = = = = = = = = = = =               |\n");
     printf("|                                                                             |\n");
     printf("|                      Saque realizado com sucesso!                           |\n");
-    getchar();
     printf(".=============================================================================.\n");
+    getchar();
     printf("\n"); 
     free(contas);
     fclose(fp);
   }
   else {
-    system("clear||cls");   
-    printf("\n");
-    printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-    printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-    getchar();
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-    printf("\n"); 
-    free(contas);
-
-}
-}
-
-/*
-
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
@@ -166,7 +142,10 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
     printf("|                                                                             |\n");
     printf("|              [verifique os dados inseridos e tente novamente]\n             |\n");
     printf("|                                                                             |\n");
-    getchar();
     printf(".=============================================================================.\n");
+    getchar();
     printf("\n"); 
-*/
+    free(contas);
+
+}
+}

@@ -15,7 +15,7 @@ int CPFvalidation(char *cpf){
     printf("|                                                                             |\n");
     printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                  Digite um CPF valido (0 pra cancelar): \n                  |\n");
+    printf("|                  Digite um CPF valido (0 pra cancelar): ");
     return 0;
   }
   else if((strcmp(cpf,"00000000000") == 0) || (strcmp(cpf,"11111111111") == 0) || (strcmp(cpf,"22222222222") == 0) ||(strcmp(cpf,"33333333333") == 0) || (strcmp(cpf,"44444444444") == 0) || (strcmp(cpf,"55555555555") == 0) ||(strcmp(cpf,"66666666666") == 0) || (strcmp(cpf,"77777777777") == 0) || (strcmp(cpf,"88888888888") == 0) ||(strcmp(cpf,"99999999999") == 0))
@@ -26,7 +26,7 @@ int CPFvalidation(char *cpf){
     printf("|                                                                             |\n");
     printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                  Digite um CPF valido (0 pra cancelar): \n                  |\n");
+    printf("|                  Digite um CPF valido (0 pra cancelar): ");
     return 0;
   }
   else {
@@ -45,7 +45,7 @@ int CPFvalidation(char *cpf){
     printf("|                                                                             |\n");
     printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                  Digite um CPF valido (0 pra cancelar): \n                  |\n");
+    printf("|                  Digite um CPF valido (0 pra cancelar):  ");
     return 0;
     }
     else 
@@ -65,7 +65,7 @@ int CPFvalidation(char *cpf){
     printf("|                                                                             |\n");
     printf("|                    = = = = = CPF invalido = = = = =                         |\n");
     printf("|                                                                             |\n");
-    printf("|                  Digite um CPF valido (0 pra cancelar): \n                  |\n");
+    printf("|                  Digite um CPF valido (0 pra cancelar): ");
     return 0;
     }
      }

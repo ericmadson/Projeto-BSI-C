@@ -15,7 +15,7 @@ int tela_saldo(void) {
 if (fp == NULL) {
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                   = = = = = Exclusao revogada = = = = =                     |\n");
+  printf("|                     = = = = = Saldo revogada = = = = =                      |\n");
   printf("|                                                                             |\n");
   printf("|                   Ocorreu um erro na abertura do arquivo !:\n               |\n");
   printf("|                                                                             |\n");
@@ -23,12 +23,10 @@ if (fp == NULL) {
   scanf("%c", &out);
   return 0;
   }
-  // TO DO
-  // ALTERAR TEXTOS
   system("clear||cls");
   printf("|=============================================================================|\n");
   printf("|                                                                             |\n");
-  printf("|                    = = = = = Alterando a senha = = = = =                    |\n");
+  printf("|                     = = = = = Buscando conta = = = = =                      |\n");
   printf("|                                                                             |\n");
   printf("|                  Digite a senha atual: ");
   scanf(" %14[^\n]", procurado);
@@ -43,9 +41,8 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
      achou = 1;
    }
  }
-  if (achou) {
-    // TO DO
-    // ALTERAR ELSE
+  if (achou) 
+  {
     system("clear||cls");   
     printf("\n");
     printf("|=============================================================================|\n");
@@ -64,33 +61,16 @@ while((!achou) && (fread(contas, sizeof(Salva), 1, fp)))
   else {
     system("clear||cls");   
     printf("\n");
-    printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-    printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
+    printf("|=============================================================================|\n");
+    printf("|                                                                             |\n");
+    printf("|               = = = = = Falha ao encontrar conta ! = = = = =                |\n");
+    printf("|                                                                             |\n");
+    printf("|              [verifique os dados inseridos e tente novamente]\n             |\n");
+    printf("|                                                                             |\n");
     getchar();
-        printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA|\n");
-    printf("\n"); 
+    printf(".=============================================================================.\n");
+    printf("\n"); ; 
     free(contas);
     return 0;
   }
-
-/* conta = (Salva*) malloc(sizeof(Salva));
-    system("clear||cls");   
-    printf("\n");
-    printf("|=============================================================================|\n");
-    printf("|                                                                             |\n");
-    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
-    printf("|            = = = = = = = = = = =  Saldo  = = = = = = = = =                  |\n");
-    printf("|            = = = = = = = = = = = = = = = = = = = = = = = =                  |\n");
-    printf("|                                                                             |\n");
-    printf("|                    O saldo da sua conta e R$%.2f", conta->saldo);
-    getchar();
-    printf(".=============================================================================.\n");
-    printf("\n"); 
-    free(conta);
-    return 0; */
 }

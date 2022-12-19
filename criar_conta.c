@@ -35,7 +35,7 @@ Salva* SalvaConta(void){
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite seu nome completo:\n                        |\n");
+    printf("|                          Digite seu nome completo: ");
     scanf(" %80[^\n]", conta->nome);
     printf(".=============================================================================.\n");
     do {
@@ -46,7 +46,7 @@ Salva* SalvaConta(void){
     printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
     printf("|                                                                             |\n");
-    printf("|                      Digite seu estado (apenas a sigla):\n                  |\n");
+    printf("|                      Digite seu estado (apenas a sigla): ");
     scanf(" %s", estadoSigla);
     printf(".=============================================================================.\n");
     } while (siglasCmp(estadoSigla) == 0);
@@ -58,7 +58,7 @@ Salva* SalvaConta(void){
     printf("|                                                                             |\n");
     printf("|                    = = = = = Criacao de conta = = = = =                     |\n");
     printf("|                                                                             |\n");
-    printf("|                          Digite seu CPF:\n                                  |\n");
+    printf("|                          Digite seu CPF: ");
 
    do
    {
@@ -100,6 +100,8 @@ Salva* SalvaConta(void){
     return 0;
     };
     system("clear||cls");
+    
+    //saldo
     conta->saldo = 05;
     conta->status = '1';
     printf("|=============================================================================|\n");

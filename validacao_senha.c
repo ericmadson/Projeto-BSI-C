@@ -30,8 +30,8 @@ int validacao_senha(char password[7]) {
         printf("|               = = = = = Falha na criacao da conta ! = = = = =               |\n");
         printf("|                                                                             |\n");
         printf("|                [CPF, senha ou nome invalidos, tente novamente]\n            |\n");
-        getchar();
         printf(".=============================================================================.\n");
+        getchar();
         printf("\n");
         return 0;
     }
